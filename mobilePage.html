@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <title>鲜享食呈</title>
+    <script src="js/equipment .js"></script>
+    <script src="js/flexible.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        /* 顶部导航 */
+        .top-nav {
+            width: 100%;
+            position: absolute;
+            top: 0rem;
+            z-index: 1000000;
+        }
+
+        .top-nav .first {
+            padding: 0.08rem 0;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .top-nav .first .logo {
+            width: 0.61rem;
+            height: 0.14rem;
+            margin-left: 0.15rem;
+        }
+
+        .top-nav .first .logo>a>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 线 */
+        .line {
+            display: block;
+            width: 0.01rem;
+            height: 0.24rem;
+            background: #FFFFFF;
+            margin-left: 0.1rem;
+            margin-right: 0.11rem;
+        }
+
+        .first-list>ul>li {
+            margin-right: 0.26rem;
+        }
+
+        .first-list>ul>li:last-child {
+            margin: 0rem;
+        }
+
+        .first-list>ul>li>a {
+            font-size: 0.15rem;
+            color: #222D2C;
+        }
+
+        .m-icon {
+            display: block;
+            width: 0.21rem;
+            height: 0.21rem;
+            background: url('image/more.png') no-repeat center/0.21rem;
+            margin-left: 0.12rem;
+        }
+
+        .second {
+            padding: 0.14rem 1.03rem 0.12rem 0.34rem;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 1000000;
+        }
+
+        .second>ul>li {
+            font-size: 0.15rem;
+            color: #222D2C;
+        }
+
+        /* 一层 */
+        .floor-one {
+            width: 100%;
+            height: 4rem;
+            background: url('image/one-bk.png') no-repeat center/100%;
+        }
+
+        /* 轮播图 */
+        .floor-one .lunbo-one {
+            padding-top: 0.6rem;
+            margin-bottom: 0.32rem;
+            z-index: 10;
+        }
+
+        .floor-one .lunbo-one .swiper-container {
+            width: 3.24rem;
+            height: 2.1rem;
+            margin: auto;
+            z-index: 0;
+        }
+
+        .floor-one .lunbo-one .swiper-container .swiper-wrapper .swiper-slide>img {
+            width: 1.42rem;
+            height: 1.47rem;
+            margin-right: 0.15rem;
+        }
+
+        .floor-one .lunbo-one .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>span {
+            display: block;
+            width: 1.7rem;
+            margin-top: 0.14rem;
+            margin-bottom: 0.06rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: 0.18rem;
+        }
+
+        .floor-one .lunbo-one .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>p:nth-child(2) {
+            margin-bottom: 0.13rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: 0.2rem;
+            width: 1.7rem;
+        }
+
+        .floor-one .lunbo-one .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>p:nth-child(3) {
+            /* overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; */
+            line-height: 0.18rem;
+            width: 1.7rem;
+            height: 0.54rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+
+        .toJoin {
+            width: 0.6rem;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0rem 0.01rem 0.07rem 0rem rgba(71, 100, 90, 0.2);
+            border-radius: 0.1rem;
+            padding: 0.05rem 0.12rem;
+            margin-top: 0.24rem;
+            text-align: center;
+            cursor: pointer;
+            z-index: 99999999;
+        }
+
+        /* 分页器 */
+        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            left: 2.56rem;
+            bottom: 0.7rem;
+        }
+
+        .swiper-pagination-bullet {
+            width: 0.1rem;
+            height: 0.02rem;
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #FFFFFF;
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            width: 0.7rem;
+        }
+
+        /* 标题一 */
+        /* 标题一 */
+        .title-one {
+            width: 0.85rem;
+            height: 0.81rem;
+            margin: auto;
+            background: url('image/t-one.png') no-repeat center/0.85rem;
+            position: relative;
+        }
+
+        .title-one>h4 {
+            white-space: nowrap;
+            position: absolute;
+            top: 0.35rem;
+            left: -0.2rem;
+        }
+
+        .title-one>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.12rem;
+            left: -0.15rem;
+        }
+
+        /* 介绍 */
+        .introduce {
+            width: 3.45rem;
+            margin: auto;
+            /* margin-top: -0.58rem; */
+            margin-bottom: 0.15rem;
+        }
+
+        .introduce>p {
+            margin-bottom: 0.2rem;
+            line-height: 0.19rem;
+        }
+
+        .introduce>p:last-child {
+            text-align: right;
+            margin: 0rem;
+        }
+
+        /* 介绍图 */
+        .introduce-img {
+            width: 3.47rem;
+            height: 1.89rem;
+            margin: auto;
+            position: relative;
+        }
+
+        .introduce-img>img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -0.18rem;
+            left: -0.08rem;
+            margin-top: 0.09rem;
+        }
+
+        .introduce-img .box {
+            width: 100%;
+            height: 100%;
+            border: 0.02rem solid #F1DEBF;
+
+        }
+
+        /* 二层 */
+        .floor-two {
+            width: 100%;
+            height: 1.99rem;
+            background: url('image/two-bk.png') no-repeat center/100%;
+            padding-top: 0.64rem;
+        }
+
+        /* 标题 */
+        .floor-two .title {
+            width: 0.79rem;
+            height: 0.74rem;
+
+            background: url('image/t-two.png') no-repeat center/0.79rem;
+            position: relative;
+        }
+
+        .floor-two .title>h4 {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            top: 0.3rem;
+        }
+
+        .floor-two .title>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.09rem;
+            left: -0.16rem;
+        }
+
+        /* 轮播 */
+        .lunbo-two {
+            width: 3.3rem;
+            margin: auto;
+            margin-top: -0.95rem;
+        }
+
+        .lunbo-two .swiper-container .swiper-wrapper .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #FFE3F2;
+            position: relative;
+        }
+
+        .lunbo-two .swiper-container .swiper-wrapper .swiper-slide:nth-child(2n) {
+            background: #F3EADA;
+        }
+
+        .lunbo-two .swiper-container .swiper-wrapper .swiper-slide>img {
+            width: 1.5rem;
+            height: 1.7rem;
+            margin-bottom: 0.16rem;
+            margin-top: 0.05rem;
+        }
+
+        .lunbo-two .swiper-container .swiper-wrapper .swiper-slide .r-icon {
+            display: block;
+            width: 0.52rem;
+            height: 0.5rem;
+            background: url('image/r-icon.png') no-repeat center/0.52rem;
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            z-index: 100;
+        }
+
+        .lunbo-two .swiper-container .swiper-wrapper .swiper-slide .info>span {
+            display: block;
+            width: 1.43rem;
+            text-align: left;
+            margin-left: 0.12rem;
+            margin-bottom: 0.05rem;
+        }
+
+        .lunbo-two .swiper-container .swiper-wrapper .swiper-slide .info>p {
+            width: 1.3rem;
+            height: 0.5rem;
+            margin-left: 0.1rem;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-height: 0.17rem;
+            margin-bottom: 0.1rem;
+        }
+
+        /* .lunbo-two .swiper-container .swiper-wrapper .swiper-slide-next,
+        .lunbo-two .swiper-container .swiper-wrapper .swiper-slide-prev {
+            background: #F3EADA;
+        } */
+
+
+        /* 三层 */
+        .floor-three {
+            width: 100%;
+            position: relative;
+            margin-bottom: 0.18rem;
+        }
+
+        .floor-three .r-bk {
+            width: 0.95rem;
+            height: 1.17rem;
+            background: url('image/right.png') no-repeat center/0.95rem;
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+        }
+
+        .floor-three .title {
+            width: 0.82rem;
+            height: 0.82rem;
+            background: url('image/t-three.png') no-repeat center/0.82rem;
+            position: relative;
+            margin-top: 0.51rem;
+        }
+
+        .floor-three .title>h4 {
+            position: absolute;
+            top: 0.39rem;
+            left: 0.04rem;
+        }
+
+        .floor-three .title>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.09rem;
+            left: -0.04rem;
+        }
+
+        /* 轮播 */
+        .lunbo-three {
+            width: 100%;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide {
+            width: 2.85rem;
+            border: 0.01rem solid rgba(157, 231, 209, 1);
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .img-list {
+            width: 2.64rem;
+            height: 1.49rem;
+            position: relative;
+            margin-top: 0.11rem;
+            margin-left: 0.02rem;
+            overflow: hidden;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .img-list ul li {
+            position: absolute;
+            top: 0rem;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .img-list ul li img {
+            width: 2.64rem;
+            height: 1.49rem;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .name-count {
+            width: 2.64rem;
+            margin: auto;
+            margin-bottom: 0.09rem;
+            margin-top: 0.1rem;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .name-count .name {
+            width: 1rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: 0.2rem;
+        }
+
+        .l-icon {
+            display: block;
+            width: 0.04rem;
+            height: 0.06rem;
+            background: url('image/l-arrow.png') no-repeat center/0.04rem;
+            margin-right: 0.07rem;
+        }
+
+        .r-icon {
+            display: block;
+            width: 0.04rem;
+            height: 0.06rem;
+            background: url('image/r-arrow.png') no-repeat center/0.04rem;
+            margin-left: 0.07rem;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide>p {
+            width: 2.64rem;
+            margin: auto;
+            /* overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; */
+            line-height: 0.18rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .fire-people-money {
+            width: 2.64rem;
+            margin: auto;
+            padding: 0.06rem 0;
+            background: #F1F9F6;
+            border-radius: 0.06rem;
+            margin-top: 0.04rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .fire-people-money .people {
+            width: 1.35rem;
+            font-size: 0.1rem;
+            font-family: NotoSansHans-Regular;
+            /* margin-left: 0.05rem;
+            margin-right: 0.1rem; */
+            /* overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-right: 0.1rem; */
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide .fire-people-money .money {
+            width: 1rem;
+            font-size: 0.1rem;
+            font-family: NotoSansHans-Regular;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .fire {
+            display: block;
+            width: 0.09rem;
+            height: 0.11rem;
+            background: url('image/fire.png') no-repeat center/0.09rem;
+            margin-left: 0.08rem;
+            margin-right: 0.08rem;
+        }
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide:not(.swiper-slide-active) {
+            transform: scale(0.87);
+        }
+
+
+        .lunbo-three .swiper-container .swiper-wrapper .swiper-slide-active {
+            border: none;
+            box-shadow: 0.01rem 0.05rem 0.12rem 0rem rgba(34, 34, 34, 0.12);
+        }
+
+        .banner-bk {
+            width: 100%;
+            height: 0.77rem;
+            background: url('image/banner.png') no-repeat center/100%;
+        }
+
+        .title-two {
+            width: 0.99rem;
+            height: 0.99rem;
+            margin: auto;
+            margin-top: 0.21rem;
+            margin-bottom: 0.14rem;
+            background: url('image/t-four.png') no-repeat center/0.99rem;
+            position: relative;
+        }
+
+        .title-two>h4 {
+            white-space: nowrap;
+            position: absolute;
+            top: 0.42rem;
+            left: -0.08rem;
+        }
+
+        .title-two>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.22rem;
+            left: -0.28rem;
+        }
+
+        /* 六项 */
+        .six {
+            width: 3.46rem;
+            height: 6.51rem;
+            margin: auto;
+            background: url('image/six.png') no-repeat center/3.46rem;
+        }
+
+        .six .top {
+            margin-left: 0.24rem;
+            padding-top: 0.18rem;
+            margin-bottom: 0.16rem;
+        }
+
+        .six .bottom {
+            width: 3.18rem;
+            margin: auto;
+        }
+
+        .six .bottom>ul>li {
+            width: 1.50rem;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0.01rem 0.03rem 0.1rem 0rem rgba(105, 105, 105, 0.16);
+            margin-bottom: 0.15rem;
+        }
+
+        .six .bottom>ul>li .list-item {
+            padding: 0.12rem 0.13rem 0.16rem 0.15rem;
+        }
+
+        .six .bottom>ul>li .list-item .line-one .one-icon {
+            display: block;
+            width: 0.28rem;
+            height: 0.4rem;
+            background: url('image/one-icon.png') no-repeat center/0.28rem;
+            margin-right: 0.12rem;
+        }
+
+        .six .bottom>ul>li .list-item .line-one .two-icon {
+            display: block;
+            width: 0.28rem;
+            height: 0.4rem;
+            background: url('image/two-icon.png') no-repeat center/0.28rem;
+            margin-right: 0.12rem;
+        }
+
+        .six .bottom>ul>li .list-item .line-one .three-icon {
+            display: block;
+            width: 0.28rem;
+            height: 0.4rem;
+            background: url('image/three-icon.png') no-repeat center/0.28rem;
+            margin-right: 0.12rem;
+        }
+
+        .six .bottom>ul>li .list-item .line-one .four-icon {
+            display: block;
+            width: 0.28rem;
+            height: 0.4rem;
+            background: url('image/four-icon.png') no-repeat center/0.28rem;
+            margin-right: 0.12rem;
+        }
+
+        .six .bottom>ul>li .list-item .line-one .five-icon {
+            display: block;
+            width: 0.28rem;
+            height: 0.4rem;
+            background: url('image/five-icon.png') no-repeat center/0.28rem;
+            margin-right: 0.12rem;
+        }
+
+        .six .bottom>ul>li .list-item .line-one .six-icon {
+            display: block;
+            width: 0.28rem;
+            height: 0.4rem;
+            background: url('image/six-icon.png') no-repeat center/0.28rem;
+            margin-right: 0.12rem;
+        }
+
+        .six .bottom>ul>li .list-item .line-one .stp>h4 {
+            margin-top: 0.04rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .six .bottom>ul>li .list-item>p {
+            margin-top: 0.14rem;
+            line-height: 0.18rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+
+
+        /* 三项 */
+        .three {
+            width: 3.46rem;
+            height: 5.13rem;
+            margin: auto;
+            background: url('image/three.png') no-repeat center/3.46rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.43rem;
+        }
+
+        .three .top {
+            margin-left: 0.23rem;
+            padding-top: 0.26rem;
+            margin-bottom: 0.18rem;
+        }
+
+        .three .bottom {
+            width: 3.06rem;
+            margin: auto;
+        }
+
+        .three .bottom ul li {
+            width: 100%;
+            height: 1.08rem;
+
+            margin-bottom: 0.13rem;
+        }
+
+        .three .bottom ul li>h4 {
+            padding-top: 0.24rem;
+            margin-left: 0.6rem;
+            margin-bottom: 0.14rem;
+        }
+
+        .three .bottom ul li>p {
+            width: 1.4rem;
+            line-height: 0.18rem;
+            margin-left: 0.6rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .three .bottom ul li:nth-child(1) {
+            background: url('image/li-one.png') no-repeat center/100%;
+        }
+
+        .three .bottom ul li:nth-child(2) {
+            background: url('image/li-two.png') no-repeat center/100%;
+        }
+
+        .three .bottom ul li:nth-child(3) {
+            background: url('image/li-three.png') no-repeat center/100%;
+        }
+
+        /* 提交 */
+        .submit {
+            width: 100%;
+        }
+
+        /* 标题 */
+        .submit .title {
+            width: 0.87rem;
+            height: 0.87rem;
+            background: url('image/t-five.png') no-repeat center/0.87rem;
+            position: relative;
+            margin-bottom: 0.23rem;
+        }
+
+        .submit .title>h4 {
+            white-space: nowrap;
+            position: absolute;
+            top: 0.33rem;
+            left: -0.32rem;
+        }
+
+        .submit .title>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.21rem;
+            left: -0.38rem;
+        }
+
+        .submit .submit-box {
+            width: 3.39rem;
+            height: 3.76rem;
+            background: url('image/submit.png') no-repeat center/3.39rem;
+        }
+
+        .submit .submit-box .left {
+            width: 0.22rem;
+            height: 1.27rem;
+            margin-left: 0.32rem;
+            margin-top: 0.2rem;
+            margin-right: 0.21rem;
+        }
+
+        .submit .submit-box .left>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .submit .submit-box .right {
+            width: 2.25rem;
+            margin-top: 0.2rem;
+        }
+
+        .right>input {
+            width: 100%;
+            height: 0.4rem;
+            border: 0.01rem solid #FFFFFF;
+            margin-bottom: 0.1rem;
+            text-indent: 0.1rem;
+        }
+
+        .right>input::placeholder {
+            font-size: 0.14rem;
+            color: #FFFFFF;
+        }
+
+        .right>textarea {
+            width: 100%;
+            height: 0.61rem;
+            border: 0.01rem solid #FFFFFF;
+            text-indent: 0.1rem;
+            padding-top: 0.14rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .right>textarea::placeholder {
+            font-size: 0.14rem;
+            color: #FFFFFF;
+        }
+
+        .apply {
+            width: 1rem;
+            background: rgba(255, 255, 255, 1);
+            border: 0.01rem solid rgba(255, 255, 255, 1);
+            text-align: center;
+            font-size: 0.17rem;
+            color: #DE8D8D;
+            padding: 0.08rem 0;
+            margin-left: 1.22rem;
+        }
+
+        .last {
+            width: 100%;
+            height: 3rem;
+            background: url('image/last-bk.png') no-repeat center/100%;
+            margin-top: -0.38rem;
+        }
+
+        .last>a {
+            display: block;
+            width: 0.55rem;
+            height: 0.82rem;
+            margin-top: 0.8rem;
+            position: relative;
+            margin-bottom: 0.15rem;
+        }
+
+        .last>a>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .last>a>span {
+            position: absolute;
+            top: 0.39rem;
+            left: 0.14rem;
+        }
+
+        .last .code-line .left {
+            padding-right: 0.19rem;
+            border-right: 0.01rem solid #FFFFFF;
+            margin-right: 0.18rem;
+        }
+
+        .last .code-line .left>img {
+            width: 0.56rem;
+            height: 0.46rem;
+            margin-bottom: 0.06rem;
+        }
+
+        .join-Btn {
+            width: 1rem;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 0.1rem;
+            font-size: 0.09rem;
+            color: #19585D;
+            text-align: center;
+            padding: 0.06rem 0.1rem;
+        }
+
+        .last .code-line .right>img {
+            width: 0.72rem;
+            height: 0.72rem;
+            padding: 0.02rem;
+            background: #FFFFFF;
+            margin-right: 0.13rem;
+        }
+
+        .last .code-line .right .right-info .top {
+            margin-bottom: 0.2rem;
+        }
+
+        .last .code-line .right .right-info .top .arrow-icon {
+            display: block;
+            width: 0.1rem;
+            height: 0.1rem;
+            background: url('image/into.png') no-repeat center/0.1rem;
+            margin-right: 0.05rem;
+        }
+
+        .last .code-line .right .right-info .top>span:last-child {
+            width: 0.8rem;
+            height: 0.2rem;
+            display: block;
+        }
+
+        .last .code-line .right .right-info .bottom>p {
+            margin-bottom: 0.05rem;
+        }
+
+        .last .code-line .right .right-info .bottom>p .wp-icon {
+            display: block;
+            width: 0.09rem;
+            height: 0.09rem;
+            background: url('image/phone-2.png') no-repeat center/0.09rem;
+            margin-right: 0.03rem;
+        }
+
+        .bottom-line {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            bottom: 0rem;
+            padding: 0.05rem 0;
+        }
+
+        .bottom-line>p {
+            text-align: center;
+        }
+
+        .bottom-line>p:first-child {
+            margin-bottom: 0.05rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="containers">
+        <!-- 顶部导航 -->
+        <div class="top-nav">
+            <a name="top"></a>
+            <div class="first flex fl-align">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="image/logo.png">
+                    </a>
+                </div>
+                <span class="line"></span>
+                <div class="first-list">
+                    <ul class="flex fl-align    ">
+                        <li>
+                            <a href="#introduce">企业简介</a>
+                        </li>
+                        <li>
+                            <a href="#show">产品展示</a>
+                        </li>
+                        <li>
+                            <a href="#shop">门店展示</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="m-icon"></span>
+            </div>
+
+            <div class="second hide">
+                <ul class="flex fl-align fl-jsb">
+                    <li class="policy">
+                        加盟扶持政策
+                    </li>
+                    <li class="submits">
+                        加盟意向信息提交
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <!-- 一层 -->
+        <div class="floor-one">
+            <!-- 轮播 -->
+            <div class="lunbo-one">
+                <div class="swiper-container swiper-container1">
+                    <div class="swiper-wrapper">
+                    </div>
+                    <!-- 分页器 -->
+                    <div class="swiper-pagination swiper-pagination1"></div>
+                </div>
+            </div>
+            <!-- 标题一 -->
+            <a name="introduce"></a>
+            <div class="title-one">
+                <h4 class="fz-19 c-2c">关于-鲜享食呈</h4>
+                <span class="fz-12 c-2c">company profile</span>
+            </div>
+        </div>
+        <!-- 介绍 -->
+        <div class="introduce">
+            <p class="fz-14 c-2c">
+                <strong>厦门【鲜享食呈】餐饮管理有限公司成立于2017年，是一家以酸奶为主打的轻食餐饮连锁企业。提倡营养健康时尚美食，选用低卡路里，低脂肪的食材，新鲜现做，原汁原味，一经推出备受追捧。</strong>
+            </p>
+            <p class="fz-14 c-2c">品牌覆盖：福建省、江西省、浙江省、广东省等10个城市，在福州、泉州、漳州、南昌、宁德、龙岩、宁波、广州、上海等地区已有近100家门店。</p>
+            <p class="fz-14 c-2c">鲜享食呈坚持新鲜先做，没有添加剂；选材严格，无论是鲜果还是谷物，坚持天天配送不隔夜，确保食材新鲜度；食材种类繁多，可随意搭配，解决食客“选择困难症”。</p>
+            <p class="fz-14 c-2c"><strong>—— 有酸奶 轻盈更健康</strong></p>
+        </div>
+        <!-- 介绍图 -->
+        <div class="introduce-img">
+            <img src="">
+            <div class="box"></div>
+        </div>
+        <!-- 二层 -->
+        <div class="floor-two flex col fl-align">
+            <!-- 标题 -->
+            <a name="show"></a>
+            <div class="title">
+                <h4 class="fz-19 c-2c">产品展示</h4>
+                <span class="fz-12 c-2c">Product display</span>
+            </div>
+        </div>
+        <!-- 轮播 -->
+        <div class="lunbo-two">
+
+            <div class="swiper-container swiper-container2">
+                <div class="swiper-wrapper">
+
+                    <!-- <div class="swiper-slide flex col">
+                                <img src="resource/show.png">
+                                <span class="r-icon"></span>
+                                <div class="info">
+                                    <span class="fz-16 c-2c f-w5">超级鲜果杯</span>
+                                    <p class="fz-13 c-a49">满满的一杯超级鲜果
+                                        杯 包含7种新鲜水果
+                                        丰富你的各种维生素</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide flex col">
+                                <img src="resource/show.png">
+                                <span class="r-icon"></span>
+                                <div class="info">
+                                    <span class="fz-16 c-2c f-w5">超级鲜果杯</span>
+                                    <p class="fz-13 c-a49">满满的一杯超级鲜果
+                                        杯 包含7种新鲜水果
+                                        丰富你的各种维生素</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide flex col">
+                                <img src="resource/show.png">
+                                <span class="r-icon"></span>
+                                <div class="info">
+                                    <span class="fz-16 c-2c f-w5">超级鲜果杯</span>
+                                    <p class="fz-13 c-a49">满满的一杯超级鲜果
+                                        杯 包含7种新鲜水果
+                                        丰富你的各种维生素</p>
+                                </div>
+                            </div> -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- 三层 -->
+        <div class="floor-three flex col fl-align">
+            <div class="r-bk"></div>
+            <!-- 标题 -->
+            <a name="shop"></a>
+            <div class="title">
+                <h4 class="fz-19 c-2c">门店展示</h4>
+                <span class="fz-12 c-2c">Store display</span>
+            </div>
+        </div>
+
+        <!-- 轮播 -->
+        <div class="lunbo-three">
+
+            <div class="swiper-container swiper-container4 flex fl-align">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide flex col fl-align">
+                        <div class="img-list">
+                            <ul>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="name-count flex fl-align fl-jsb">
+                            <h4 class="name fz-26 c-2c">泉州店</h4>
+                            <div class="count flex fl-align">
+                                <span class="l-icon"></span>
+                                <span>01/05</span>
+                                <span class="r-icon"></span>
+                            </div>
+                        </div>
+                        <p class="fz-16 c-c2">广州市越秀区东风中路268号广州交易广场首层商铺西</p>
+                        <div class="fire-people-money flex fl-align">
+                            <span class="fire"></span>
+                            <span class="people fz-16 c-2c">客流量 日均约15620人</span>
+                            <span>营业额 日均约30000元</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex col fl-align">
+                        <div class="img-list">
+                            <ul>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="name-count flex fl-align fl-jsb">
+                            <h4 class="name fz-26 c-2c">泉州店</h4>
+                            <div class="count flex fl-align">
+                                <span class="l-icon"></span>
+                                <span>01/05</span>
+                                <span class="r-icon"></span>
+                            </div>
+                        </div>
+                        <p class="fz-16 c-c2">广州市越秀区东风中路268号广州交易广场首层商铺西</p>
+                        <div class="fire-people-money flex fl-align">
+                            <span class="fire"></span>
+                            <span class="people fz-16 c-2c">客流量 日均约15620人</span>
+                            <span>营业额 日均约30000元</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex col fl-align">
+                        <div class="img-list">
+                            <ul>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                                <li>
+                                    <img src="resources/shop-1.png">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="name-count flex fl-align fl-jsb">
+                            <h4 class="name fz-26 c-2c">泉州店</h4>
+                            <div class="count flex fl-align">
+                                <span class="l-icon"></span>
+                                <span>01/05</span>
+                                <span class="r-icon"></span>
+                            </div>
+                        </div>
+                        <p class="fz-16 c-c2">广州市越秀区东风中路268号广州交易广场首层商铺西</p>
+                        <div class="fire-people-money flex fl-align">
+                            <span class="fire"></span>
+                            <span class="people fz-16 c-2c">客流量 日均约15620人</span>
+                            <span>营业额 日均约30000元</span>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="banner-bk"></div>
+        <!-- 标题 -->
+        <a name="policy"></a>
+        <div class="title-two">
+            <h4 class="fz-19 c-2c">加盟政策扶持</h4>
+            <span class="fz-12 c-2c">Joining policy support</span>
+        </div>
+        <!-- 六项 -->
+        <div class="six">
+            <div class="top">
+                <p>
+                    <span class="fz-90 c-64 f-si">6</span>
+                    <span class="fz-19 c-64 f-si">大扶持政策</span>
+                </p>
+                <p class="f-si fz-19 c-64">一步到位开店体验</p>
+            </div>
+            <div class="bottom">
+                <ul class="flex fl-jsb fl-wa">
+                    <li>
+                        <div class="list-item">
+                            <div class="line-one flex fl-align">
+                                <span class="one-icon"></span>
+                                <div class="stp">
+                                    <h4 class="fz-15 c-2c">STEP1</h4>
+                                    <span class="fz-18 c-2c">培训扶持</span>
+                                </div>
+                            </div>
+                            <p class="fz-14 c-2c"></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-item">
+                            <div class="line-one flex fl-align">
+                                <span class="two-icon"></span>
+                                <div class="stp">
+                                    <h4 class="fz-15 c-2c">STEP2</h4>
+                                    <span class="fz-18 c-2c">选址扶持</span>
+                                </div>
+                            </div>
+                            <p class="fz-14 c-2c"></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-item">
+                            <div class="line-one flex fl-align">
+                                <span class="three-icon"></span>
+                                <div class="stp">
+                                    <h4 class="fz-15 c-2c">STEP3</h4>
+                                    <span class="fz-18 c-2c">营销扶持</span>
+                                </div>
+                            </div>
+                            <p class="fz-14 c-2c"></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-item">
+                            <div class="line-one flex fl-align">
+                                <span class="four-icon"></span>
+                                <div class="stp">
+                                    <h4 class="fz-15 c-2c">STEP4</h4>
+                                    <span class="fz-18 c-2c">技术扶持</span>
+                                </div>
+                            </div>
+                            <p class="fz-14 c-2c"></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-item">
+                            <div class="line-one flex fl-align">
+                                <span class="five-icon"></span>
+                                <div class="stp">
+                                    <h4 class="fz-15 c-2c">STEP5</h4>
+                                    <span class="fz-18 c-2c">研发扶持</span>
+                                </div>
+                            </div>
+                            <p class="fz-14 c-2c"></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-item">
+                            <div class="line-one flex fl-align">
+                                <span class="six-icon"></span>
+                                <div class="stp">
+                                    <h4 class="fz-15 c-2c">STEP6</h4>
+                                    <span class="fz-18 c-2c">运营扶持</span>
+                                </div>
+                            </div>
+                            <p class="fz-14 c-2c"></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 三项 -->
+        <div class="three">
+            <div class="top">
+                <p>
+                    <span class="fz-90 c-C0 f-si">3</span>
+                    <span class="fz-19 c-C0 f-si">大保护策略</span>
+                </p>
+                <p class="fz-19 c-C0">护航您的创业之路</p>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li>
+                        <h4 class="fz-17 c-2c">区域保护</h4>
+                        <p class="fz-14 c-2c"></p>
+                    </li>
+                    <li>
+                        <h4 class="fz-17 c-2c">风险保护</h4>
+                        <p class="fz-14 c-2c"></p>
+                    </li>
+                    <li>
+                        <h4 class="fz-17 c-2c">信誉保护</h4>
+                        <p class="fz-14 c-2c"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="submit flex col fl-align">
+            <!-- 标题 -->
+            <a name="submit"></a>
+            <div class="title">
+                <h4 class="fz-19 c-2c">加盟意向信息提交</h4>
+                <span class="fz-12 c-2c">Information submission</span>
+            </div>
+            <div class="submit-box flex">
+                <div class="left">
+                    <img src="image/join.png">
+                </div>
+                <div class="right">
+                    <input type="text" placeholder="怎么称呼您" id="username">
+                    <input type="text" placeholder="您的联系电话" id="phone">
+                    <textarea name="" id="getInfo" cols="30" rows="10" placeholder="说些什么吧？"></textarea>
+                    <div class="apply">提交</div>
+                </div>
+            </div>
+        </div>
+        <div class="last flex col fl-align">
+            <!-- 返回 -->
+            <a href="#top">
+                <img src="image/back.png">
+                <span class="fz-14 c-fff">顶部</span>
+            </a>
+            <div class="code-line flex fl-align">
+                <div class="left flex col fl-align">
+                    <img src="image/logo-2.png">
+                    <div class="join-Btn">
+                        有酸奶 轻盈更健康
+                    </div>
+                </div>
+                <div class="right flex">
+                    <img src="">
+                    <div class="right-info">
+                        <div class="top flex fl-align">
+                            <span class="arrow-icon"></span>
+                            <span class="fz-9 c-fff">
+                                扫一扫二维码
+                                微信咨询
+                            </span>
+                        </div>
+                        <div class="bottom">
+                            <p class="flex fl-align">
+                                <span class="wp-icon"></span>
+                                <span class="fz-9 c-fff">加盟热线HOTLINE</span>
+                            </p>
+                            <p class="fz-14 c-fff">400-8833-556</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-line flex col">
+            <p class="fz-9 c-5D">Copyright&copy;2006-2019XianXiangShiCheng鲜享食呈</p>
+            <p class="fz-9 c-5D">技术支持:黑蜂科技</p>
+        </div>
+    </div>
+
+</body>
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+
+
+
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+
+    function hengshuping() {
+        if (window.orientation == 0 || window.orientation == 180) {
+            var shu = window.localStorage.getItem('name')
+            if (shu == 'a') {
+                window.location.reload();
+                window.localStorage.setItem('name', 'b');
+            }
+            //alert('竖屏')
+            orientation = 'portrait';
+            return false;
+        } else if (window.orientation == 90 || window.orientation == -90) {
+            var shu = window.localStorage.getItem('name')
+            if (shu == 'b') {
+                window.location.reload();
+                window.localStorage.setItem('name', 'a');
+            }
+            // alert('横屏')
+            orientation = 'landscape';
+            return false;
+        }
+    }
+
+
+
+    $(function () {
+
+
+        // 判断手机为横屏还是竖屏
+        hengshuping();
+
+        $('.policy').on('click', function () {
+            $('.top-nav .second').hide();
+            $('html,body').animate({ scrollTop: $('.six').offset().top }, 800);
+            // console.log(1111);
+        })
+
+        $('.submits,.toJoin').on('click', function () {
+            $('.top-nav .second').hide();
+            $('html,body').animate({ scrollTop: $('.submit-box').offset().top }, 800);
+            // console.log(222);
+        })
+
+
+        //动效： 顶部导航
+        $('.m-icon').on('touchstart', function () {
+            $('.top-nav .second').toggle("fast");
+        });
+
+        // $('.top-nav .second ul').on('touchstart', 'li', function () {
+        //     // 
+        // });
+
+        // 轮播图
+        ajax_post('/index.php/App/Index/getBanner', {}, function (r) {
+            // console.log(r);
+            callBack(r, {
+                success: function (data) {
+                    // console.log(data)
+                    let list = data.slice(0.3)
+                    // console.log(list);
+                    let html = '';
+                    for (let i = 0; i < list.length; i++) {
+                        html += `<div class="swiper-slide flex" data-id="${list[i].ad_id}">
+                            <img src="${list[i].ad_code}">
+                            <div class="lunbo-info">
+                                <span class="fz-11 c-2c f-w5">${list[i].ad_des}</span>
+                                <p>
+                                <span class="fz-18 c-2c f-w3">${list[i].ad_des}</span>
+                                <span class="fz-18 c-2c">${list[i].ad_des_thick}</span>
+                                </p>
+                                <p class="fz-12 c-2c f-w5">${list[i].key_word}</p>
+                                <div class="toJoin fz-12 c-a6">去加盟</div>
+                            </div>
+                        </div>`
+                    }
+                    // console.log(html);
+                    $('.lunbo-one .swiper-container .swiper-wrapper').append(html);
+                    var mySwiper = new Swiper('.swiper-container1', {
+                        pagination: {
+                            el: '.swiper-pagination1',
+                            clickable: true,
+                        }
+                    })
+
+                    $('.toJoin').on('click', function () {
+                        // console.log(1111);
+                        $('html,body').animate({ scrollTop: $('.submit').offset().top }, 800);
+
+                    })
+                }
+            })
+        })
+
+        // 产品展示
+        ajax_post('/index.php/App/Goods/getGoodsList', {}, function (r) {
+            //  console.log(r)
+            let html = '';
+            callBack(r, {
+                success: function (data) {
+                    //  console.log(data);
+                    for (let i = 0; i < data.length; i++) {
+
+                        html += ` <div class="swiper-slide" data-id="${data[i].id}">
+                                        <img src="${data[i].original_img}">
+                                        <span class="r-icon"></span>
+                                        <div class="info">
+                                            <span class="fz-16 c-2c f-w5">${data[i].goods_name}</span>
+                                            <p class="fz-13 c-a49">${data[i].goods_remark}</p>
+                                        </div>
+                                    </div>`;
+                    }
+                    // console.log(html);
+                    $('.lunbo-two .swiper-container .swiper-wrapper').append(html);
+                    var swiper = new Swiper('.swiper-container2', {
+                        autoplay: {
+                            disableOnInteraction: false, //手动滑动之后不打断播放
+                            delay: 2000
+                        },
+                        loop: true,
+                        slidesPerView: 2,
+                        spaceBetween: 11,
+                    });
+                }
+            })
+        })
+
+        // 门店展示
+        ajax_post('/index.php/App/User/getShops', {}, function (r) {
+            var showhtml = "<style>.img-list > ul > li{display:none};</style>" +
+                "<script>" +
+                "$(function(){" +
+                "$('.img-list > ul > li:first-child').css('display','block');" +
+                "});" +
+                "function next(obj){" +
+                "var inx = parseInt($(obj).parent().parent().prev().find('ul').attr('index'));" +
+                "let len = $(obj).parent().parent().prev().find('ul').children().length;" +
+                "if (inx < len - 1) {" +
+                "inx++;" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).show();" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).siblings().hide();" +
+                "let inx2 = inx + 1;" +
+                "let count = (inx2) + '/' + len;" +
+                "$(obj).parent().find('.number').html(count)" +
+                "}" +
+                "$(obj).parent().parent().prev().find('ul').attr('index',inx);" +
+                "}" +
+                "function pre(obj){" +
+                "var inx = parseInt($(obj).parent().parent().prev().find('ul').attr('index'));" +
+
+                "let len = $(obj).parent().parent().prev().find('ul').children().length;" +
+                "if (inx > 0) {" +
+                "inx--;" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).show();" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).siblings().hide();" +
+                "let index3 = inx + 1;" +
+                "let count = index3 + '/' + len;" +
+                "$(obj).parent().find('.number').html(count)" +
+                "}" +
+                "$(obj).parent().parent().prev().find('ul').attr('index',inx);" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).removeClass('hide');" +
+
+                "}" +
+                "<\/script>";
+            r.forEach(function (item, index) {
+                var imghtml = '';
+                item.shops_images.forEach(function (elem, index) {
+                    imghtml += `<li>
+                                    <img src="${elem.image_url}">
+                                </li>`
+
+                })
+                showhtml += `<div class="swiper-slide flex col fl-align">
+                        <div class="img-list">
+                            <ul index="0">${imghtml}</ul>
+                        </div>
+                        <div class="name-count flex fl-align fl-jsb">
+                            <h4 class="name fz-26 c-2c">${item.name}</h4>
+                            <div class="count flex fl-align">
+                                <span class="l-icon" onclick="pre(this)"></span>
+                                <span class="number">1/${item.shops_images.length}</span>
+                                <span class="r-icon" onclick="next(this)"></span>
+                            </div>
+                        </div>
+                        <p class="fz-16 c-c2">${item.address}</p>
+                        <div class="fire-people-money flex fl-align">
+                            <span class="fire"></span>
+                            <span class="people c-2c">客流量 日均约${item.day_people}人</span>
+                            <span class="money">营业额 日均约${item.day_sales}元</span>
+                        </div>
+                    </div>`;
+            })
+            $('.lunbo-three .swiper-container .swiper-wrapper').append(showhtml);
+            var abcSwiper = new Swiper(".swiper-container4", {
+                // autoplay: {
+                //     disableOnInteraction: false, //手动滑动之后不打断播放
+                //     delay: 3000
+                // },
+                slidesPerView: 'auto',   //设置slider容器能够同时显示的slides数量
+                centeredSlides: true,    //设定为true时，活动块会居中，而不是默认状态下的居左。
+                loop: true,
+            });
+
+
+        })
+
+
+
+
+
+
+
+        // 政策
+        ajax_post('/index.php/App/User/getAlliancePolicy', {}, function (r) {
+            let six = r.slice(0, 6);
+            let three = r.slice(6);
+            for (let i = 0; i < six.length; i++) {
+                let describe = six[i].describe
+                $('.six .bottom ul').children().eq(i).find('p').html(describe);
+            }
+            for (let j = 0; j < three.length; j++) {
+                let describe = three[j].describe
+                $('.three .bottom ul').children().eq(j).find('p').html(describe);
+            }
+        })
+
+        // 关于我们
+        ajax_post('/index.php/App/user/getPicture', { pic_id: 1 }, function (r) {
+            let img = r.value;
+            $('.introduce-img img').attr('src', img);
+        })
+
+        // 二维码
+        ajax_post('/index.php/App/user/getPicture', { pic_id: 2 }, function (r) {
+            let img = r.value;
+            // console.log(img);
+            $('.code-line .right img').attr('src', img);
+        })
+
+        // 意见反馈
+        $('.apply').on('click', function () {
+            let name = $('#username').val()
+            let phone = $('#phone').val();
+            let info = $('#getInfo').val()
+            if (!name) {
+                alert('请输入你的称呼！')
+            } else if (!phone) {
+                alert('请输入您的联系电话！')
+            } else if (!(/^1[34578]\d{9}$/.test(phone))) {
+                alert('请输入有效的电话号码')
+            } else if (!info) {
+                alert('请输入你想咨询的内容')
+            } else {
+                let param = {
+                    name: name,
+                    phone: phone,
+                    content: info
+                }
+                ajax_post('/index.php/App/User/addFeedBack', param, function (r) {
+                    // console.log(r);
+                    let status = r.status
+                    if (status == 200) {
+                        alert('提交成功！');
+                        window.location.reload();
+                    } else {
+                        alert('提交失败，请稍后重试！')
+                    }
+                })
+            }
+        })
+
+    })
+</script>
+
+</html>

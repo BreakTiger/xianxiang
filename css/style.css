@@ -1,0 +1,613 @@
+
+
+
+
+/*  */
+
+
+
+/* 第一轮播 */
+.floor-one .lunbo-one {
+    
+    padding-top: 1.69rem;
+    margin-bottom: 1.27rem;
+
+}
+
+
+.floor-one .lunbo-one .swiper-father {
+   
+    /* position: relative; */
+}
+
+.floor-one .lunbo-one .swiper-father .swiper-container {
+    width: 11.72rem;
+    height: 6.01rem;
+
+}
+
+.floor-one .lunbo-one .swiper-father .swiper-container .swiper-wrapper .swiper-slide {
+    width: 11.72rem;
+    height: 6.01rem;
+}
+
+
+
+
+
+
+/* 关于-鲜享食呈 */
+.floor-one .about {
+    width: 14.13rem;
+    margin: auto;
+}
+
+/* 标题 */
+.floor-one .about .title {
+    width: 2.03rem;
+    height: 1.94rem;
+    background: url('images/about.png') no-repeat center/2.03rem;
+    position: relative;
+}
+
+.floor-one .about .title>h4 {
+    position: absolute;
+    top: 1rem;
+    left: 0.08rem;
+}
+
+.floor-one .about .title>span {
+    text-transform: Uppercase;
+    position: absolute;
+    bottom: 0.33rem;
+    left: 0.12rem;
+}
+
+/* 内容 */
+.floor-one .about .content {
+    width: 100%;
+    margin-top: 0.66rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 左边 */
+.floor-one .about .content .left-content {
+    width: 5.07rem;
+}
+
+.floor-one .about .content .left-content>p {
+    font-size: 0.2rem;
+    color: #222D2C;
+    margin-bottom: 0.2rem;
+    line-height: 0.28rem;
+}
+
+.floor-one .about .content .left-content>p:last-child {
+    margin: 0rem;
+    margin-top: 0.47rem;
+    text-align: right;
+}
+
+/* 右边 */
+.floor-one .about .content .right-content {
+    width: 8.13rem;
+    height: 4.44rem;
+    position: relative;
+}
+
+.floor-one .about .content .right-content>img {
+    width: 100%;
+    height: 100%;
+}
+
+.floor-one .about .content .right-content .e-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.18rem;
+    z-index: 10;
+    border: 0.03rem solid #F1DEBF;
+}
+
+
+
+
+/* 二层 */
+.floor-two {
+    width: 100%;
+    height: 9.48rem;
+    background: url('images/second-bk.png') no-repeat center/100%;
+    margin-top: -2.25rem;
+}
+
+.floor-two .show {
+    width: 14rem;
+    margin: auto;
+}
+
+/* 标题 */
+.floor-two .show .title {
+    width: 1.79rem;
+    height: 1.68rem;
+    background: url('images/show.png') no-repeat center/1.79rem;
+    margin-top: 1.4rem;
+    position: relative;
+    margin-bottom: 0.37rem;
+}
+
+.floor-two .show .title>h4 {
+    position: absolute;
+    top: 0.76rem;
+    left: 0.21rem;
+}
+
+.floor-two .show .title>span {
+    white-space: nowrap;
+    text-transform: Uppercase;
+    position: absolute;
+    bottom: 0.31rem;
+}
+
+
+/* 第二轮播 */
+
+
+
+
+
+
+
+
+
+
+
+/* 三层 */
+.floor-three {
+    width: 100%;
+    height: 10.64rem;
+    position: relative;
+}
+
+.floor-three .thrid-bk {
+    width: 100%;
+    height: 9.26rem;
+    background: url('images/third-bk.png') no-repeat center/100%;
+    position: absolute;
+    bottom: 0rem;
+    /* z-index: 100; */
+}
+
+.floor-three .show {
+    width: 18.12rem;
+    margin: auto;
+}
+
+/* 标题 */
+.floor-three .title {
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
+    background: url('images/shop.png') no-repeat center/2rem;
+    position: relative;
+    margin-top: 0.7rem;
+    margin-bottom: 0.35rem;
+}
+
+.floor-three .title>h4 {
+    position: absolute;
+    top: 1.01rem;
+    left: 0.38rem;
+
+}
+
+.floor-three .title>span {
+    text-transform: Uppercase;
+    position: absolute;
+    bottom: 0.38rem;
+    left: 0.23rem;
+}
+
+/* 第三轮播 */
+
+
+
+/* 四层 */
+.floor-four {
+    width: 100%;
+    position: relative;
+}
+
+.floor-four .join {
+    width: 14rem;
+    margin: auto;
+}
+
+/* 标题 */
+.floor-four .join .title {
+    width: 2.48rem;
+    height: 2.48rem;
+    background: url('images/policy.png') no-repeat center/2.48rem;
+    margin-top: 0.85rem;
+    margin-bottom: 0.18rem;
+    position: relative;
+}
+
+.floor-four .join .title>h4 {
+    position: absolute;
+    top: 1.24rem;
+    left: 0.33rem;
+}
+
+.floor-four .join .title>span {
+    white-space: nowrap;
+    text-transform: Uppercase;
+    position: absolute;
+    bottom: 0.63rem;
+}
+
+.floor-four .join .six {
+    width: 14rem;
+    height: 5rem;
+    background: url('images/six-policy.png') no-repeat center/14rem;
+    margin-bottom: 0.4rem;
+}
+
+.floor-four .join .six .left {
+    width: 2.55rem;
+    padding-top: 0.77rem;
+    margin-left: 0.55rem;
+}
+
+.floor-four .join .six .left>p:first-child {
+    margin-bottom: 0.23rem;
+}
+
+.floor-four .join .six .right {
+    width: 9.88rem;
+    margin-top: 0.3rem;
+    margin-right: 0.41rem;
+}
+
+.floor-four .join .six .right ul {
+    flex-wrap: wrap;
+}
+
+.floor-four .join .six .right ul li {
+    width: 3rem;
+    margin-bottom: 0.4rem;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0.01rem 0.06rem 0.2rem 0rem rgba(105, 105, 105, 0.16);
+}
+
+.floor-four .join .six .right ul li .list-item {
+    padding: 0.33rem 0.37rem 0.3rem 0.33rem;
+}
+
+
+.floor-four .join .six .right ul li .list-item .line-one .one-icon {
+    display: block;
+    width: 0.6rem;
+    height: 0.64rem;
+    background: url('images/one-icon.png') no-repeat center/0.6rem;
+}
+
+.floor-four .join .six .right ul li .list-item .line-one .two-icon {
+    display: block;
+    width: 0.6rem;
+    height: 0.64rem;
+    background: url('images/two-icon.png') no-repeat center/0.6rem;
+}
+
+.floor-four .join .six .right ul li .list-item .line-one .three-icon {
+    display: block;
+    width: 0.6rem;
+    height: 0.64rem;
+    background: url('images/three-icon.png') no-repeat center/0.6rem;
+}
+
+.floor-four .join .six .right ul li .list-item .line-one .four-icon {
+    display: block;
+    width: 0.6rem;
+    height: 0.64rem;
+    background: url('images/four-icon.png') no-repeat center/0.6rem;
+}
+
+.floor-four .join .six .right ul li .list-item .line-one .five-icon {
+    display: block;
+    width: 0.6rem;
+    height: 0.64rem;
+    background: url('images/five-icon.png') no-repeat center/0.6rem;
+}
+
+.floor-four .join .six .right ul li .list-item .line-one .six-icon {
+    display: block;
+    width: 0.6rem;
+    height: 0.64rem;
+    background: url('images/six-icon.png') no-repeat center/0.6rem;
+}
+
+.floor-four .join .six .right ul li .list-item .line-one .stp>span:first-child {
+    margin-top: 0.06rem;
+    margin-bottom: 0.16rem;
+}
+
+.floor-four .join .six .right ul li .list-item>p {
+    margin-top: 0.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.floor-four .join .three {
+    width: 14rem;
+    height: 3rem;
+    background: url('images/three-policy.png') no-repeat center/14rem;
+}
+
+.floor-four .join .three .left {
+    padding-top: 0.59rem;
+    margin-left: 0.6rem;
+}
+
+.floor-four .join .three .right {
+    width: 10.20rem;
+    height: 2.10rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 1.05rem;
+    margin-right: 0.3rem;
+    margin-top: 0.48rem;
+}
+
+.floor-four .join .three .right ul {
+    padding: 0rem 0.7rem;
+    margin-top: 0.59rem;
+}
+
+.floor-four .join .three .right ul li {
+    width: 2.28rem;
+    height: 1.26rem;
+    position: relative;
+}
+
+.floor-four .join .three .right ul li>img {
+    width: 1.46rem;
+    height: 1.2rem;
+    position: absolute;
+    top: 0.1rem;
+    left: 0.82rem;
+}
+
+.floor-four .join .three .right ul li .list-item {
+    width: 1.8rem;
+}
+
+.floor-four .join .three .right ul li .list-item>h4 {
+    margin-bottom: 0.19rem;
+}
+
+.floor-four .join .three .right ul li .list-item>span {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+/* 标题 */
+.floor-four .title-2 {
+    width: 1.85rem;
+    height: 1.84rem;
+    background: url('images/info-up.png') no-repeat center/1.85rem;
+    margin-top: 1.36rem;
+    margin-bottom: 0.41rem;
+    position: relative;
+}
+
+.floor-four .title-2>h4 {
+    white-space: nowrap;
+    position: absolute;
+    top: 0.74rem;
+    left: -0.32rem;
+}
+
+.floor-four .title-2>span {
+    white-space: nowrap;
+    text-transform: Uppercase;
+    position: absolute;
+    bottom: 0.48rem;
+    left: -0.48rem;
+}
+
+.floor-four .left-bk {
+    width: 2.61rem;
+    height: 3.35rem;
+    background: url('images/left-bk.png') no-repeat center/2.61rem;
+    position: absolute;
+    left: 0rem;
+    bottom: 1.72rem;
+    z-index: 100;
+}
+
+.floor-four .right-bk {
+    width: 4.83rem;
+    height: 6.32rem;
+    background: url('images/right-bk.png') no-repeat center/4.83rem;
+    position: absolute;
+    right: 0rem;
+    bottom: 0.41rem;
+    z-index: 100;
+}
+
+/* 五层 */
+.floor-five {
+    width: 100%;
+    height: 10.86rem;
+    background: url('images/last-bk.png') no-repeat center/100%;
+}
+
+.floor-five .input-content {
+    width: 14rem;
+    height: 4.2rem;
+    background: url('images/last-floor-bk.png') no-repeat center/14rem;
+    margin-top: 0.29rem;
+    text-align: right;
+}
+
+.floor-five .input-content>div {
+    padding-top: 0.39rem;
+    padding-left: 5.74rem;
+    padding-right: 3.06rem;
+}
+
+.floor-five .input-content>div>span {
+    width: 0.35rem;
+    height: 1.53rem;
+    text-transform: Uppercase;
+    text-align-last: justify;
+    writing-mode: vertical-lr;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.input-btn>input {
+    width: 4.5rem;
+    height: 0.5rem;
+    text-indent: 0.18rem;
+    border: 0.01rem solid rgba(255, 255, 255, 1);
+    margin-bottom: 0.2rem;
+}
+
+.input-btn>input::placeholder,
+.input-btn>textarea::placeholder {
+    font-size: 0.2rem;
+    color: #FFFFFF;
+}
+
+.input-btn>textarea {
+    width: 4.5rem;
+    height: 1.4rem;
+    text-indent: 0.18rem;
+    border: 0.01rem solid rgba(255, 255, 255, 1);
+    padding-top: 0.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.tijiao {
+    font-size: 0.2rem;
+    color: #DE8D8D;
+    width: 2rem;
+    background: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.15rem 0;
+    margin-left: 2.5rem;
+}
+
+.floor-five .backs {
+    display: block;
+    width: 0.87rem;
+    height: 1.31rem;
+    margin-top: 0.99rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.floor-five .backs>img {
+    width: 100%;
+    height: 100%;
+}
+
+.floor-five .backs .back {
+    font-size: 0.2rem;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0.63rem;
+    left: 0.23rem;
+}
+
+.code-line {
+    width: 7.29rem;
+    margin-bottom: 0.8rem;
+}
+
+.code-line .left {
+    width: 1.8rem;
+    padding-right: 0.77rem;
+    margin-right: 0.68rem;
+    border-right: 0.01rem solid #ffffff;
+}
+
+.code-line .left>img {
+    width: 1.67rem;
+    height: 1.41rem;
+    margin-bottom: 0.20rem;
+}
+
+.code-line .left .join-Btn {
+    width: 1.80rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 0.20rem;
+    padding: 0.12rem 0;
+    cursor: pointer;
+    color: #19585D;
+    font-size: 0.16rem;
+}
+
+.code-line .right>img {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.02rem;
+    margin-right: 0.2rem;
+}
+
+.arrow-icon {
+    display: block;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url('images/arrow.png') no-repeat center/0.2rem;
+    margin-right: 0.09rem;
+}
+
+.code-line .right .right-info .top {
+    margin-top: 0.2rem;
+    margin-bottom: 0.76rem;
+}
+
+.code-line .right .right-info .top>span:last-child {
+    width: 1.04rem;
+}
+
+.code-line .right .right-info .bottom .wp-icon {
+    display: block;
+    width: 0.17rem;
+    height: 0.17rem;
+    background: url('images/phone-2.png') no-repeat center/0.17rem;
+    margin-right: 0.02rem;
+}
+
+.code-line .right .right-info .bottom>p:last-child {
+    white-space: nowrap;
+    margin-top: 0.13rem;
+}
+
+/* 最底部：技术提供方 */
+#containers .bottoms {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 11px 0;
+}
+
+#containers .bottoms>span:first-child {
+    margin-right: 60px;
+}

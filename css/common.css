@@ -1,0 +1,338 @@
+html{
+    font-size:100px;
+}
+body {
+    font-size:0.16rem;
+    /* font-family:A03-; */
+    background: #FFFFFF;
+    width:100%;
+    height:auto;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+a{
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+span {
+    -webkit-tap-highlight-color : transparent ;
+    -moz-tap-highlight-color : transparent ;
+    -ms-tap-highlight-color : transparent ;
+}
+/* 单选框显示不出来，所以注释掉了 */
+input {
+    /* -webkit-appearance: none; */
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #A8A8A8;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #A8A8A8;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #A8A8A8;
+}
+input, select, textarea,button {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    border: 0;
+    background:transparent;
+    color:#707070;
+}
+textarea {
+    resize: none;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -moz-box-shadow: 0 0 0 1000px white inset;
+    -ms-box-shadow: 0 0 0 1000px white inset;
+}
+/* h1, h2, h3, h4, h5, h6 {
+    font-family:NotoSansHans-Bold;
+    font-weight:bold;
+    color:#161616;
+} */
+/*浮动*/
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+.clearfix:before,.clearfix:after{
+    content:'.';
+    display:block;
+    height:0;
+    clear:both;
+    overflow:hidden;
+}
+/*弹性布局*/
+.flex {
+    display: flex;
+}
+.col{
+    flex-direction: column;
+}
+.row{
+    flex-direction: row;
+}
+.fl-align {
+    align-items: center;
+}
+.fl-j {
+    justify-content: center;
+}
+.fl-jsb {
+    justify-content: space-between;
+}
+.fl-wa{
+    flex-wrap: wrap;
+}
+/*字体大小*/
+.fz-9{
+    font-size: 0.09rem;
+}
+
+.fz-10{
+    font-size: 0.1rem;
+}
+.fz-14{
+    font-size: 0.14rem;
+}
+.fz-15{
+    font-size: 0.15rem;
+}
+
+.fz-18{
+    font-size: 0.18rem;
+}
+
+.fz-19{
+    font-size: 0.19rem;
+}
+.fz-12{
+    font-size: 0.12rem;
+}
+.fz-11{
+    font-size: 0.11rem;
+}
+.fz-13{
+    font-size: 0.13rem;
+}
+.fz-16{
+    font-size: 0.16rem;
+}
+.fz-18{
+    font-size: 0.18rem;
+}
+.fz-20{
+    font-size: 0.2rem;
+}
+
+.fz-24{
+    font-size: 0.24rem;
+}
+.fz-28{
+    font-size: 0.28rem;
+}
+.fz-30{
+    font-size: 0.3rem;
+}
+
+.fz-36{
+    font-size: 0.36rem;
+}
+.fz-40{
+    font-size: 0.4rem;
+}
+.fz-90{
+    font-size: 0.9rem;
+}
+
+.fz-180{
+    font-size: 1.8rem;
+}
+
+/*字体*/
+.fw-b{
+    font-family:NotoSansHans-Bold;
+}
+.fw-m{
+    font-family:NotoSansHans-Medium;
+}
+.fw-r{
+    font-family:NotoSansHans-Regular;
+}
+.fw-d{
+    font-family:DIN-Medium;
+}
+
+.f-w3{
+    font-weight: 300;
+}
+.f-w4{
+    font-weight:400;
+}
+.f-w5{
+    font-weight:500;
+}
+.f-wb{
+    font-weight:bold;
+}
+
+.f-si{
+    font-style:italic;
+}
+/*字体颜色*/
+.c-a6{
+    color: #12B6A6;
+}
+
+.c-2c{
+    color: #222D2C;
+}
+
+.c-46{
+    color: #468371;
+}
+
+.c-a49{
+    color: #444A49;
+}
+
+.c-fff{
+    color: #ffffff;
+}
+
+.c-5D{
+    color: #19585D
+}
+.c-fff{
+    color: #fff;
+}
+
+.c-64{
+    color: #FF9864;
+}
+
+.c-C0{
+    color: #16D5C0;
+}
+.c-ef{
+    color: #FEFFFF;
+}
+/*背景颜色*/
+.b-fc{
+    background:#FCFCFC;
+}
+.b-hover{
+    background:#FF7303;
+}
+.b-active{
+   background:#0062B8;
+}
+.b-active1{
+    background:#0062B8;
+}
+.b-07{
+   background:#0070D3;
+}
+.b-fff{
+   background:#FFFFFF;
+}
+/* 超出显示省略号 */
+.clamp1 {
+    overflow:hidden;
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;
+}
+.clamp2 {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.clamp3 {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+}
+
+/*底部线条*/
+.lineBottom {
+    position: relative;
+    z-index: 0;
+}
+.lineBottom::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius:0.02rem;
+    border-bottom: 0.04rem solid #0070D3;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    width:200%;
+    height:200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    margin-top:0.21rem;
+}
+.lineBottom div,.lineBottom span, .lineBottom a .lineBottom li{
+    position: relative;
+}
+/*右线条*/
+.lineright{
+    position: relative;
+    z-index: 0;
+}
+.lineright::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0.39rem;;
+    border-right: 0.04rem solid #EBEBEB;
+    -webkit-box-sizing: border-box;
+    width:200%;
+    height:200%;
+    box-sizing: border-box;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    padding-left:0.29rem;
+}
+.lineright div,.lineright span, .lineright a {
+    position: relative;
+}
+
+/*容器*/
+#containers{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+.on{
+    display:block;
+}
+.hide{
+    display:none;
+}
+
+
+

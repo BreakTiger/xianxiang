@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <title>鲜享食呈</title>
+    <script src="js/equipment .js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        #containers {
+            width: 19.2rem;
+            position: relative;
+        }
+
+        /* 导航 */
+        .top-nav {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+        }
+
+        .logo {
+            width: 1.22rem;
+            height: 0.27rem;
+            margin-left: 2.62rem;
+            margin-right: 0.65rem;
+            margin-top: 0.27rem;
+            margin-bottom: 0.26rem;
+        }
+
+        .logo>a>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-list {
+            padding-top: 0.33rem;
+        }
+
+        .nav-list ul li {
+            margin: 0rem 0.3rem;
+        }
+
+        .nav-list ul li a {
+            font-size: 0.2rem;
+            font-family: NotoSansHans-DemiLight;
+            font-weight: normal;
+            color: rgba(34, 45, 44, 1);
+        }
+
+        .nav-right {
+            margin-left: 1.99rem;
+            margin-top: 0.16rem;
+        }
+
+        .nav-right>div {
+            margin-bottom: 0.08rem;
+        }
+
+        .nav-right>div .p-icon {
+            display: block;
+            width: 0.17rem;
+            height: 0.17rem;
+            background: url('images/p-icon.png') no-repeat center/0.17rem;
+            margin-right: 0.2rem;
+        }
+
+        /* 一层 */
+        .floor-one {
+            width: 100%;
+            height: 19.3rem;
+            background: url('images/header-bk.png') no-repeat center/100%;
+        }
+
+        /* 轮播一 */
+        .lunbo-one {
+            width: 13.66rem;
+            padding-top: 1.27rem;
+        }
+
+        .lunbo-one .swiper-container {
+            width: 13.66rem;
+            height: 6.01rem;
+        }
+
+        .lunbo-one .swiper-container .swiper-wrapper .swiper-slide>img {
+            width: 5.81rem;
+            height: 6.01rem;
+            margin-right: 0.54rem;
+            margin-left: 0.81rem;
+        }
+
+        .lunbo-one .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>p:nth-child(1) {
+            margin-top: 1.32rem;
+            margin-bottom: 0.32rem;
+            width: 3.7rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis
+        }
+
+        .lunbo-one .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>p:nth-child(2) {
+            margin-bottom: 0.16rem;
+            width: 4.6rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .lunbo-one .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>p:nth-child(3) {
+            width: 3.6rem;
+            height: 0.4rem;
+            line-height: 0.2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            margin-bottom: 1.12rem;
+        }
+
+        .lunbo-one .swiper-container .swiper-wrapper .swiper-slide .lunbo-info .toJoin {
+            width: 2.2rem;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: -0.01rem 0.02rem 0.14rem 0rem rgba(71, 100, 90, 0.2);
+            border-radius: 0.31rem;
+            text-align: center;
+            padding: 0.16rem 0;
+            cursor: pointer;
+        }
+
+        /* 分页器 */
+        .lunbo-one .swiper-container .swiper-pagination1 {
+            left: 11.48rem !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .lunbo-one .swiper-container .swiper-pagination1>span {
+            display: block;
+            width: 0.4rem;
+            height: 0.04rem;
+            border-radius: 0rem;
+        }
+
+        .lunbo-one .swiper-container .swiper-pagination1 .swiper-pagination-bullet-active {
+            background: #ffffff;
+        }
+
+        .lunbo-one .swiper-container .swiper-button-prev1 {
+            width: 0.16rem;
+            height: 0.3rem;
+            background: url('images/left.png') no-repeat center/0.16rem;
+        }
+
+        .lunbo-one .swiper-container .swiper-button-next1 {
+            width: 0.16rem;
+            height: 0.3rem;
+            background: url('images/right.png') no-repeat center/0.16rem;
+        }
+
+        .title-about {
+            width: 2.03rem;
+            height: 1.94rem;
+            margin-top: 1.27rem;
+            margin-bottom: 0.66rem;
+            background: url('images/about.png') no-repeat center/2.03rem;
+            position: relative;
+        }
+
+        .title-about>h4 {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            top: 1rem;
+            left: 0.08rem;
+        }
+
+        .title-about>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.33rem;
+            left: 0.12rem;
+        }
+
+        .about {
+            width: 14.13rem;
+        }
+
+        .about .left {
+            width: 5.07rem;
+        }
+
+        .about .left>p {
+            font-size: 0.2rem;
+            color: #222D2C;
+            margin-bottom: 0.47rem;
+            font-family: NotoSansHans-Medium;
+            line-height: 0.28rem;
+        }
+
+        .about .left>p:last-child {
+            text-align: right;
+        }
+
+        .about .right {
+            width: 8.13rem;
+            height: 4.44rem;
+            position: relative;
+            border-radius: 0.08rem;
+        }
+
+        .about .right>img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /* top: -0.2rem; */
+            left: -0.18rem;
+        }
+
+        .about .right .e-box {
+            width: 100%;
+            height: 100%;
+            background: url('images/box.png') no-repeat center/100%;
+            margin-top: 0.2rem;
+            /* position: absolute; */
+            /* top: 0.2rem; */
+            /* left: 0.18rem; */
+
+        }
+
+        /* 二层 */
+        .floor-two {
+            width: 100%;
+            height: 9.48rem;
+            background: url('images/second-bk.png') no-repeat center/100%;
+            margin-top: -2.25rem;
+        }
+
+        .title-show {
+            width: 1.79rem;
+            height: 1.68rem;
+            background: url('images/show.png') no-repeat center/1.79rem;
+            margin-top: 1.4rem;
+            position: relative;
+            margin-bottom: 0.37rem;
+        }
+
+        .title-show>h4 {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            top: 0.76rem;
+            left: 0.21rem;
+        }
+
+        .title-show>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.31rem;
+        }
+
+        /* 轮播二 */
+        .lunbo-two {
+            width: 14rem;
+            height: 5.16rem;
+            margin: auto;
+        }
+
+        .lunbo-two .swiper-father {
+            position: relative;
+        }
+
+        .lunbo-two .swiper-father .swiper-container {
+            width: 11.66rem;
+            height: 5.16rem;
+        }
+
+        .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide {
+            position: relative;
+            background: #DAEDF3;
+            /* padding-right: 0.12rem; */
+        }
+
+        /* .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide .img-box {
+            width: 3.38rem;
+            height: 3.8rem;
+            margin-top: 0.12rem;
+        }
+
+        .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide .img-box>img {
+            width: 100%;
+            height: 100%;
+        } */
+
+
+        /* .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+            width: 3.38rem;
+            height: 3.8rem;
+            margin-top: 0.12rem;
+        } */
+
+        @media (min-width: 1024px) {
+            .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+                width: 159px;
+                height: 3.8rem;
+                margin-top: 0.12rem;
+            }
+        }
+
+        /*>=1024的设备*/
+        @media (min-width: 1100px) {
+            .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+                width: 175px;
+                height: 3.8rem;
+                margin-top: 0.12rem;
+            }
+        }
+
+        /*>=1024的设备*/
+        @media (min-width: 1280px) {
+            .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+                width: 209px;
+                height: 3.8rem;
+                margin-top: 0.12rem;
+            }
+        }
+
+        @media (min-width: 1366px) {
+            .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+                width: 226px;
+                height: 3.8rem;
+                margin-top: 0.12rem;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+                width: 241px;
+                height: 3.8rem;
+                margin-top: 0.12rem;
+            }
+        }
+
+        @media (min-width: 1680px) {
+            .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+                width: 3.3rem;
+                height: 3.8rem;
+                margin-top: 0.12rem;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide>img {
+                width: 338px;
+                height: 380px;
+                margin-top: 12px;
+            }
+        }
+
+        .lunbo-two .swiper-father .swiper-container .swiper-slide .lunbo-info {
+            padding: 0.24rem 0.12rem 0.23rem 0.18rem;
+        }
+
+        .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>h4 {
+            width: 100%;
+            margin-bottom: 0.12rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide .lunbo-info>p {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-height: 0.2rem;
+        }
+
+        .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide-active {
+            background: rgba(255, 227, 242, 1);
+        }
+
+        .lunbo-two .swiper-father .swiper-container .swiper-wrapper .swiper-slide-next {
+            background: #F3EADA;
+        }
+
+
+
+        .lunbo-two .swiper-father .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            width: 0.6rem;
+            height: 0.6rem;
+            background: url('images/toLeft.png') no-repeat center/0.6rem;
+            outline: 0;
+        }
+
+        .lunbo-two .swiper-father .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
+            width: 0.6rem;
+            height: 0.6rem;
+            background: url('images/toRight.png') no-repeat center/0.6rem;
+            outline: 0;
+        }
+
+
+
+
+
+
+
+        /* 三层 */
+        .floor-three {
+            width: 100%;
+            height: 10.64rem;
+            position: relative;
+        }
+
+        .title-shop {
+            width: 2rem;
+            height: 2rem;
+            margin: auto;
+            background: url('images/shop.png') no-repeat center/2rem;
+            position: relative;
+            margin-top: 0.6rem;
+            margin-bottom: 0.08rem;
+
+        }
+
+        .title-shop>h4 {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            top: 1.01rem;
+            left: 0.38rem;
+        }
+
+        .title-shop>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.38rem;
+            left: 0.23rem;
+        }
+
+        .floor-three .thrid-bk {
+            width: 100%;
+            height: 9.26rem;
+            background: url('images/third-bk.png') no-repeat center/100%;
+            position: absolute;
+            bottom: 0rem;
+        }
+
+        /* 轮播三 */
+
+
+        .floor-three .swiper-container {
+            width: 18.12rem;
+            height: auto;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide {
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(157, 231, 209, 1);
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide .img-list {
+            width: 4.9rem;
+            height: 2.71rem;
+            margin-top: 0.3rem;
+            position: relative;
+            margin-bottom: 0.2rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide .img-list>ul>li>img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide .name-count {
+            width: 4.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide .name-count .name {
+            width: 2rem;
+            font-size: 0.2rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active .name-count .name {
+            width: 3rem;
+            font-size: 0.26rem !important;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide>p {
+            width: 4.9rem;
+            height: 0.43rem;
+            text-align: left;
+            margin-bottom: 0.18rem;
+            font-size: 0.16rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-height: 0.22rem;
+
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide .fire-people-money {
+            width: 4.9rem;
+            padding: 0.06rem 0;
+            background: #F1F9F6;
+            border-radius: 0.12rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active .fire-people-money>span {
+            font-size: 0.18rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide .fire-people-money .people {
+            margin-right: 0.27rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide:not(.swiper-slide-active) {
+            transform: scale(0.94);
+            margin-top: 0.45rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active {
+            border: none;
+            box-shadow: 0.02rem 0.1rem 0.24rem 0rem rgba(34, 34, 34, 0.12);
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active .img-list {
+            width: 5.24rem;
+            height: 3.3rem;
+            position: relative;
+
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active .img-list>ul>li>img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active .name-count {
+            width: 5.24rem;
+            margin-bottom: 0.18rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active>p {
+            width: 5.24rem;
+            height: 0.45rem;
+            text-align: left;
+            margin-bottom: 0.18rem;
+            font-size: 0.2rem !important;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active .fire-people-money {
+            width: 5.24rem;
+        }
+
+        .floor-three .swiper-container .swiper-wrapper .swiper-slide-active .fire-people-money .people {
+            margin-right: 0.7rem;
+        }
+
+        .l-icon {
+            display: block;
+            width: 0.11rem;
+            height: 0.14rem;
+            background: url('images/s-l.png') no-repeat center/0.05rem;
+            margin-right: 0.1rem;
+            cursor: pointer;
+        }
+
+        .r-icon {
+            display: block;
+            width: 0.11rem;
+            height: 0.14rem;
+            background: url('images/s-r.png') no-repeat center/0.05rem;
+            margin-left: 0.1rem;
+            cursor: pointer;
+        }
+
+        .fire {
+            display: block;
+            width: 0.18rem;
+            height: 0.22rem;
+            background: url('images/fire.png') no-repeat center/0.18rem;
+            margin-left: 0.24rem;
+            margin-right: 0.19rem;
+        }
+
+        .third-bk {
+            width: 19.20rem;
+            height: 9.26rem;
+            background: url('images/third-bk.png') no-repeat center/19.20rem;
+            position: absolute;
+            bottom: 0.5rem;
+        }
+
+        /* 四层 */
+        .title-join {
+            width: 2.48rem;
+            height: 2.48rem;
+            background: url('images/policy.png') no-repeat center/2.48rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.18rem;
+            position: relative;
+        }
+
+        .title-join>h4 {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            top: 1.24rem;
+            left: 0.33rem;
+        }
+
+        .title-join>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.63rem;
+        }
+
+        .six {
+            width: 14rem;
+            height: 5rem;
+            background: url('images/six-policy.png') no-repeat center/14rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .six .left {
+            width: 2.55rem;
+            padding-top: 0.77rem;
+            margin-left: 0.55rem;
+        }
+
+        .six .left>p:first-child {
+            margin-bottom: 0.23rem;
+        }
+
+        .six .right {
+            width: 9.88rem;
+            margin-top: 0.3rem;
+            margin-right: 0.41rem;
+        }
+
+        .six .right ul {
+            flex-wrap: wrap;
+        }
+
+        .six .right ul li {
+            width: 3rem;
+            height: 2rem;
+            margin-bottom: 0.4rem;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0.01rem 0.06rem 0.2rem 0rem rgba(105, 105, 105, 0.16);
+        }
+
+        .six .right ul li .list-item {
+            padding: 0.33rem 0.37rem 0.3rem 0.33rem;
+        }
+
+        .six .right ul li .list-item .line-one .one-icon {
+            display: block;
+            width: 0.6rem;
+            height: 0.64rem;
+            background: url('images/one-icon.png') no-repeat center/0.6rem;
+        }
+
+        .six .right ul li .list-item .line-one .two-icon {
+            display: block;
+            width: 0.6rem;
+            height: 0.64rem;
+            background: url('images/two-icon.png') no-repeat center/0.6rem;
+        }
+
+        .six .right ul li .list-item .line-one .three-icon {
+            display: block;
+            width: 0.6rem;
+            height: 0.64rem;
+            background: url('images/three-icon.png') no-repeat center/0.6rem;
+        }
+
+        .six .right ul li .list-item .line-one .four-icon {
+            display: block;
+            width: 0.6rem;
+            height: 0.64rem;
+            background: url('images/four-icon.png') no-repeat center/0.6rem;
+        }
+
+        .six .right ul li .list-item .line-one .five-icon {
+            display: block;
+            width: 0.6rem;
+            height: 0.64rem;
+            background: url('images/five-icon.png') no-repeat center/0.6rem;
+        }
+
+        .six .right ul li .list-item .line-one .six-icon {
+            display: block;
+            width: 0.6rem;
+            height: 0.64rem;
+            background: url('images/six-icon.png') no-repeat center/0.6rem;
+        }
+
+        .six .right ul li .list-item .line-one .stp>span:first-child {
+            margin-top: 0.06rem;
+            margin-bottom: 0.16rem;
+        }
+
+        .six .right ul li .list-item>p {
+            width: 2.3rem;
+            margin-top: 0.2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-height: 0.2rem;
+        }
+
+        .three {
+            width: 14rem;
+            height: 3rem;
+            background: url('images/three-policy.png') no-repeat center/14rem;
+        }
+
+        .three .left {
+            padding-top: 0.59rem;
+            margin-left: 0.6rem;
+        }
+
+        .three .right {
+            width: 10.20rem;
+            height: 2.10rem;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 1.05rem;
+            margin-right: 0.3rem;
+            margin-top: 0.48rem;
+        }
+
+        .three .right ul {
+            padding: 0rem 0.7rem;
+            margin-top: 0.59rem;
+        }
+
+        .three .right ul li {
+            width: 2.28rem;
+            height: 1.26rem;
+            position: relative;
+        }
+
+        .three .right ul li>img {
+            width: 1.46rem;
+            height: 1.2rem;
+            position: absolute;
+            top: 0.1rem;
+            left: 0.82rem;
+        }
+
+        .three .right ul li .list-item>h4 {
+            margin-bottom: 0.19rem;
+        }
+
+        .three .right ul li .list-item>span {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-height: 0.22rem;
+            height: 0.44rem;
+        }
+
+        .title-apply {
+            width: 1.85rem;
+            height: 1.84rem;
+            background: url('images/info-up.png') no-repeat center/1.85rem;
+            margin-top: 1.36rem;
+            margin-bottom: 0.41rem;
+            position: relative;
+        }
+
+        .title-apply>h4 {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            top: 0.74rem;
+            left: -0.32rem;
+        }
+
+        .title-apply>span {
+            white-space: nowrap;
+            text-transform: Uppercase;
+            position: absolute;
+            bottom: 0.48rem;
+            left: -0.48rem;
+        }
+
+        .floor-four {
+            position: relative;
+        }
+
+        .left-bk {
+            width: 2.61rem;
+            height: 3.35rem;
+            background: url('images/left-bk.png') no-repeat center/2.61rem;
+            position: absolute;
+            left: 0rem;
+            bottom: 1.72rem;
+            z-index: 100;
+        }
+
+        .right-bk {
+            width: 4.83rem;
+            height: 6.32rem;
+            background: url('images/right-bk.png') no-repeat center/4.83rem;
+            position: absolute;
+            right: 0rem;
+            bottom: 0.41rem;
+            z-index: 100;
+        }
+
+
+        /* 五层 */
+        .floor-five {
+            width: 100%;
+            height: 10.86rem;
+            background: url('images/last-bk.png') no-repeat center/100%;
+        }
+
+        .floor-five .input-content {
+            width: 14rem;
+            height: 4.2rem;
+            background: url('images/last-floor-bk.png') no-repeat center/14rem;
+            margin-top: 0.29rem;
+            text-align: right;
+        }
+
+        .floor-five .input-content>div {
+            padding-top: 0.39rem;
+            padding-left: 5.74rem;
+            padding-right: 3.06rem;
+        }
+
+        .floor-five .input-content>div .joins {
+            display: block;
+            width: 0.27rem;
+            height: 1.53rem;
+            background: url('images/join.png') no-repeat center/ 0.27rem;
+        }
+
+        .input-btn>input {
+            width: 4.5rem;
+            height: 0.5rem;
+            text-indent: 0.18rem;
+            border: 0.01rem solid rgba(255, 255, 255, 1);
+            margin-bottom: 0.2rem;
+        }
+
+        .input-btn>input::placeholder,
+        .input-btn>textarea::placeholder {
+            font-size: 0.2rem;
+            color: #FFFFFF;
+        }
+
+        .input-btn>textarea {
+            width: 4.5rem;
+            height: 1.4rem;
+            text-indent: 0.18rem;
+            border: 0.01rem solid rgba(255, 255, 255, 1);
+            padding-top: 0.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .tijiao {
+            font-size: 0.2rem;
+            color: #DE8D8D;
+            width: 2rem;
+            background: #ffffff;
+            text-align: center;
+            cursor: pointer;
+            padding: 0.15rem 0;
+            margin-left: 2.5rem;
+        }
+
+        .floor-five .backs {
+            display: block;
+            width: 0.87rem;
+            height: 1.31rem;
+            margin-top: 0.99rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .floor-five .backs>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .floor-five .backs .back {
+            font-size: 0.2rem;
+            color: #FFFFFF;
+            position: absolute;
+            top: 0.63rem;
+            left: 0.23rem;
+        }
+
+        .code-line {
+            width: 7.29rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .code-line .left {
+            width: 1.8rem;
+            padding-right: 0.77rem;
+            margin-right: 0.68rem;
+            border-right: 0.01rem solid #ffffff;
+        }
+
+        .code-line .left>img {
+            width: 1.67rem;
+            height: 1.41rem;
+            margin-bottom: 0.20rem;
+        }
+
+        .code-line .left .join-Btn {
+            width: 1.80rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 0.20rem;
+            padding: 0.12rem 0;
+
+            color: #19585D;
+            font-size: 0.16rem;
+        }
+
+        .code-line .right>img {
+            width: 2rem;
+            height: 2rem;
+            padding: 0.02rem;
+            margin-right: 0.2rem;
+        }
+
+        .arrow-icon {
+            display: block;
+            width: 0.2rem;
+            height: 0.2rem;
+            background: url('images/arrow.png') no-repeat center/0.2rem;
+            margin-right: 0.09rem;
+        }
+
+        .code-line .right .right-info .top {
+            margin-top: 0.2rem;
+            margin-bottom: 0.76rem;
+        }
+
+        .code-line .right .right-info .top>span:last-child {
+            width: 1.04rem;
+        }
+
+        .code-line .right .right-info .bottom .wp-icon {
+            display: block;
+            width: 0.17rem;
+            height: 0.17rem;
+            background: url('images/phone-2.png') no-repeat center/0.17rem;
+            margin-right: 0.02rem;
+        }
+
+        .code-line .right .right-info .bottom>p:last-child {
+            white-space: nowrap;
+            margin-top: 0.13rem;
+        }
+
+        /* 最底部：技术提供方 */
+        #containers .bottoms {
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            background: rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 11px 0;
+        }
+
+        #containers .bottoms>span:first-child {
+            margin-right: 60px;
+        }
+
+        .stp {
+            margin-left: 0.19rem;
+        }
+
+        .stp>h4 {
+            margin-bottom: 0.16rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="containers">
+
+        <!-- 顶部导航 -->
+        <div class="top-nav flex">
+            <a name="top"></a>
+            <div class="logo">
+                <a href="javascript:;">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+            <div class="nav-list">
+                <ul class="flex fl-align">
+                    <li>
+                        <a href="#about">企业简介</a>
+                    </li>
+                    <li>
+                        <a href="#show">产品展示</a>
+                    </li>
+                    <li>
+                        <a href="#shop">门店展示</a>
+                    </li>
+                    <li>
+                        <a href="#join">加盟扶持政策</a>
+                    </li>
+                    <li>
+                        <a href="#up">加盟意向信息提交</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="flex fl-align">
+                    <span class="p-icon"></span>
+                    <span class="fz-18 c-46 f-w4">加盟热线HOTLINE</span>
+                </div>
+                <span class="fz-28 c-46">400-8833-556</span>
+            </div>
+        </div>
+        <!-- 一层 -->
+        <div class="floor-one flex col fl-align">
+            <!-- 轮播一 -->
+            <div class="lunbo-one">
+                <div class="swiper-container swiper-container1">
+                    <div class="swiper-wrapper"></div>
+                    <!-- 分页器 -->
+                    <div class="swiper-pagination swiper-pagination1"></div>
+                    <!-- 左右按钮 -->
+                    <div class="swiper-button-prev swiper-button-prev1"></div>
+                    <div class="swiper-button-next swiper-button-next1"></div>
+                </div>
+            </div>
+            <!-- 关于-鲜享食呈 -->
+            <a name='about'></a>
+            <!-- 标题 -->
+            <div class="title-about">
+                <h4 class="fz-30 c-2c">关于-鲜享食呈</h4>
+                <span class="fz-20 c-2c f-w3">company profile</span>
+            </div>
+            <div class="about flex fl-jsb">
+                <div class="left">
+                    <p><strong>厦门【鲜享食呈】餐饮管理有限公司成立于2017年，是一家以酸奶为主打的轻食餐饮连锁企业。提倡营养健康时尚美食，选用低卡路里，低脂肪的食材，新鲜现做，原汁原味，一经推出备受追捧。</strong>
+                    </p>
+                    <p>品牌覆盖：福建省、江西省、浙江省、广东省等10个城市，在福州、泉州、漳州、南昌、宁德、龙岩、宁波、广州、上海等地区已有近100家门店。</p>
+                    <p>鲜享食呈坚持新鲜先做，没有添加剂；选材严格，无论是鲜果还是谷物，坚持天天配送不隔夜，确保食材新鲜度；食材种类繁多，可随意搭配，解决食客“选择困难症”。</p>
+                    <p><strong>—— 有酸奶 轻盈更健康</strong></p>
+                </div>
+                <div class="right">
+                    <img src="">
+                    <div class="e-box"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 二层 -->
+        <div class="floor-two flex col fl-align">
+            <a name="show"></a>
+            <!-- 标题 -->
+            <div class="title-show">
+                <h4 class="fz-30 c-2c">产品展示</h4>
+                <span class="fz-20 c-2c">Product display</span>
+            </div>
+
+            <!-- 轮播二 -->
+            <div class="lunbo-two">
+
+                <div class="swiper-father">
+
+                    <div class="swiper-container swiper-container2">
+                        <div class="swiper-wrapper">
+
+                            <!-- <div class="swiper-slide">
+                                <div class="img-box">
+                                    <img src="resources/show-1.png">
+                                </div>
+
+
+                                <span class="r-top"></span>
+                                <div class="lunbo-info">
+                                    <h4 class="fz-24 c-2c">超级鲜果杯</h4>
+                                    <p class="fz-18 c-a49">
+                                        满满的一杯超级鲜果杯 包含7种新鲜水
+                                        果 丰富你的各种维生素
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/show-1.png">
+                                <span class="r-top"></span>
+                                <div class="lunbo-info">
+                                    <h4 class="fz-24 c-2c">超级鲜果杯</h4>
+                                    <p class="fz-18 c-a49">
+                                        满满的一杯超级鲜果杯 包含7种新鲜水
+                                        果 丰富你的各种维生素
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/show-1.png">
+                                <span class="r-top"></span>
+                                <div class="lunbo-info">
+                                    <h4 class="fz-24 c-2c">超级鲜果杯</h4>
+                                    <p class="fz-18 c-a49">
+                                        满满的一杯超级鲜果杯 包含7种新鲜水
+                                        果 丰富你的各种维生素
+                                    </p>
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev swiper-button-prev2"></div>
+                    <div class="swiper-button-next swiper-button-next2"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 三层 -->
+        <div class="floor-three">
+            <a name="shop"></a>
+            <div class="title-shop">
+                <h4 class="fz-30 c-2c">门店展示</h4>
+                <span class="fz-20 c-2c">Store display</span>
+            </div>
+
+            <div class="lunbo-three">
+                <div class="swiper-container swiper-container4 flex fl-align">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide flex col fl-align">
+                            <div class="img-list">
+                                <ul>
+                                    <li>
+                                        <img src="resources/shop-1.png">
+                                    </li>
+                                    <li>
+                                        <img src="resources/shop-1.png">
+                                    </li>
+                                    <li>
+                                        <img src="resources/shop-1.png">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="name-count flex fl-align fl-jsb">
+                                <h4 class="name fz-26 c-2c">泉州店</h4>
+                                <div class="count flex fl-align">
+                                    <span class="l-icon"></span>
+                                    <span>01/05</span>
+                                    <span class="r-icon"></span>
+                                </div>
+                            </div>
+                            <p class="fz-16 c-c2">广州市越秀区东风中路268号广州交易广场首层商铺西</p>
+                            <div class="fire-people-money flex fl-align">
+                                <span class="fire"></span>
+                                <span class="people fz-16 c-2c">客流量 日均约15620人</span>
+                                <span>营业额 日均约30000元</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex col fl-align">
+                            <div class="img-list">
+                                <ul>
+                                    <li>
+                                        <img src="resources/shop-1.png">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="name-count flex fl-align fl-jsb">
+                                <h4 class="name fz-26 c-2c">泉州店</h4>
+                                <div class="count flex fl-align">
+                                    <span class="l-icon"></span>
+                                    <span>01/05</span>
+                                    <span class="r-icon"></span>
+                                </div>
+                            </div>
+                            <p class="fz-16 c-c2">广州市越秀区东风中路268号广州交易广场首层商铺西</p>
+                            <div class="fire-people-money flex fl-align">
+                                <span class="fire"></span>
+                                <span class="people fz-16 c-2c">客流量 日均约15620人</span>
+                                <span>营业额 日均约30000元</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex col fl-align">
+                            <div class="img-list">
+                                <ul>
+                                    <li>
+                                        <img src="resources/shop-1.png">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="name-count flex fl-align fl-jsb">
+                                <h4 class="name fz-26 c-2c">泉州店</h4>
+                                <div class="count flex fl-align">
+                                    <span class="l-icon"></span>
+                                    <span>01/05</span>
+                                    <span class="r-icon"></span>
+                                </div>
+                            </div>
+                            <p class="fz-16 c-c2">广州市越秀区东风中路268号广州交易广场首层商铺西</p>
+                            <div class="fire-people-money flex fl-align">
+                                <span class="fire"></span>
+                                <span class="people fz-16 c-2c">客流量 日均约15620人</span>
+                                <span>营业额 日均约30000元</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="third-bk"></div>
+
+
+        </div>
+        <!-- 四层 -->
+        <div class="floor-four flex col fl-align">
+            <!-- 标题 -->
+            <a name="join"></a>
+            <div class="title-join">
+                <h4 class="fz-30 c-2c">加盟政策扶持</h4>
+                <span class="fz-20 c-2c">Joining policy support</span>
+            </div>
+            <div class="six flex fl-jsb">
+                <div class="left">
+                    <p>
+                        <span class="fz-180 c-64">6</span>
+                        <span class="fz-28 c-64">大扶持政策</span>
+                    </p>
+                    <p class="fz-28 c-64">一步到位开店体验</p>
+                </div>
+                <div class="right">
+                    <ul class="flex fl-jsb">
+                        <li>
+                            <div class="list-item">
+                                <div class="line-one flex fl-align">
+                                    <span class="one-icon"></span>
+                                    <div class="stp">
+                                        <h4 class="fz-24 c-2c">STEP1</h4>
+                                        <span class="stp-name fz-24 c-2c">培训扶持</span>
+                                    </div>
+                                </div>
+                                <p class="fz-16 c-2c"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <div class="line-one flex fl-align">
+                                    <span class="two-icon"></span>
+                                    <div class="stp">
+                                        <h4 class="fz-24 c-2c">STEP2</h4>
+                                        <span class="stp-name fz-24 c-2c">选址扶持</span>
+                                    </div>
+                                </div>
+                                <p class="fz-16 c-2c">
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <div class="line-one flex fl-align">
+                                    <span class="three-icon"></span>
+                                    <div class="stp">
+                                        <h4 class="fz-24 c-2c">STEP3</h4>
+                                        <span class="stp-name fz-24 c-2c">营销扶持</span>
+                                    </div>
+                                </div>
+                                <p class="fz-16 c-2c">
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <div class="line-one flex fl-align">
+                                    <span class="four-icon"></span>
+                                    <div class="stp">
+                                        <h4 class="fz-24 c-2c">STEP4</h4>
+                                        <span class="stp-name fz-24 c-2c">技术扶持</span>
+                                    </div>
+                                </div>
+                                <p class="fz-16 c-2c">
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <div class="line-one flex fl-align">
+                                    <span class="five-icon"></span>
+                                    <div class="stp">
+                                        <h4 class="fz-24 c-2c">STEP5</h4>
+                                        <span class="stp-name fz-24 c-2c">研发扶持</span>
+                                    </div>
+                                </div>
+                                <p class="fz-16 c-2c">
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <div class="line-one flex fl-align">
+                                    <span class="six-icon"></span>
+                                    <div class="stp">
+                                        <h4 class="fz-24 c-2c">STEP6</h4>
+                                        <span class="stp-name fz-24 c-2c">运营扶持</span>
+                                    </div>
+                                </div>
+                                <p class="fz-16 c-2c">
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="three flex fl-jsb">
+                <div class="left">
+                    <p>
+                        <span class="fz-180 c-C0">3</span>
+                        <span class="fz-28 c-C0">大保护策略</span>
+                    </p>
+                    <p class="cont fz-28 c-C0">护航您的创业之路</p>
+                </div>
+                <div class="right">
+                    <ul class="flex fl-align fl-jsb">
+                        <li class="lineright">
+                            <div class="list-item">
+                                <h4 class="stp-name fz-24 c-2c">区域保护</h4>
+                                <span class="cont fz-18 c-2c">
+                                </span>
+                            </div>
+                            <img src="images/area.png">
+                        </li>
+                        <li class="lineright">
+                            <div class="list-item">
+                                <h4 class="stp-name fz-24 c-2c">信誉保护</h4>
+                                <span class="cont fz-18 c-2c">
+
+                                </span>
+                            </div>
+                            <img src="images/honor.png">
+                        </li>
+                        <li>
+                            <div class="list-item">
+                                <h4 class="stp-name fz-24 c-2c">风险保护</h4>
+                                <span class="cont fz-18 c-2c">
+
+                                </span>
+                            </div>
+                            <img src="images/safe.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="title-apply">
+                <h4 class="fz-30 c-2c">加盟意向信息提交</h4>
+                <span class="fz-20 c-2c">Information submission</span>
+            </div>
+            <div class="left-bk"></div>
+            <div class="right-bk"></div>
+        </div>
+        <!-- 五层 -->
+        <div class="floor-five flex col fl-align">
+            <a name="up"></a>
+            <div class="input-content">
+                <div class="flex fl-jsb">
+                    <span class="joins"></span>
+                    <div class="input-btn flex col">
+                        <input type="text" id="getName" placeholder="怎么称呼您">
+                        <input type="text" id="getPhone" placeholder="您的联系电话">
+                        <textarea name="" id="getInfo" cols="30" rows="10" placeholder="说些什么吧？"></textarea>
+                        <div class="tijiao">提交 </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 返回顶部 -->
+            <a href="#top" class="backs">
+                <img src="images/toTop.png">
+                <span class="back">顶部</span>
+            </a>
+            <div class="code-line flex fl-align">
+                <div class="left flex col fl-align">
+                    <img src="images/logo-2.png">
+                    <div class="join-Btn">
+                        有酸奶 轻盈更健康
+                    </div>
+                </div>
+                <div class="right flex">
+                    <img src="">
+                    <div class="right-info">
+                        <div class="top flex fl-align">
+                            <span class="arrow-icon"></span>
+                            <span class="fz-16 c-fff">
+                                扫一扫二维码
+                                微信咨询
+                            </span>
+                        </div>
+                        <div class="bottom">
+                            <p class="flex fl-align">
+                                <span class="wp-icon"></span>
+                                <span class="fz-18 c-fff">加盟热线HOTLINE</span>
+                            </p>
+                            <p class="fz-28 c-fff">400-8833-556</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 最底部：技术提供方 -->
+        <div class="bottoms">
+            <span class="fz-16 c-5D">Copyright
+                &copy; 2006-2019 XianXiangShiCheng鲜享食呈</span>
+            <span class="fz-16 c-5D">技术支持：黑蜂科技</span>
+
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+
+
+        // 获取banner列表
+        let params = {}
+        ajax_post('/index.php/App/Index/getBanner', params, function (r) {
+            let html = '';
+            callBack(r, {
+                success: function (data) {
+                    let list = data.slice(0.3)
+                    for (let i = 0; i < list.length; i++) {
+                        html += '<div class="swiper-slide flex" data-id="' + list[i].ad_id + '">' +
+                            '<img src="' + list[i].ad_code + '">' +
+                            '<div class="lunbo-info">' +
+                            '<p class="fz-30 c-2c f-w3">' + list[i].ad_name + '</p>' +
+                            '<p class="fz-40 c-2c">' +
+                            '<span class="f-w3">' + list[i].ad_des + '</span>' +
+                            '<span>' + list[i].ad_des_thick + '</span>' +
+                            '</p>' +
+                            '<p class="fz-22 c-2c">' + list[i].key_word + '</p>' +
+                            '<div class="toJoin fz-30 c-a6 f-wb">' + '去加盟' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>';
+                    }
+                    $('.lunbo-one .swiper-container .swiper-wrapper').append(html);
+                    var mySwiper = new Swiper('.swiper-container1', {
+                        direction: 'horizontal',
+                        pagination: {
+                            el: '.swiper-pagination1',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next1',
+                            prevEl: '.swiper-button-prev1',
+                        },
+                    })
+                    $('.toJoin').on('click', function () {
+                        // console.log(1111);
+                        $('html,body').animate({ scrollTop: $('.title-apply').offset().top }, 800);
+
+                    })
+                }
+            })
+        });
+
+        // 介绍图片
+        ajax_post('/index.php/App/user/getPicture', { pic_id: 1 }, function (r) {
+            let img = r.value
+            // console.log(img);
+            $('.about .right img').attr('src', img);
+        });
+
+        // 产品展示
+        ajax_post('/index.php/App/Goods/getGoodsList', {}, function (r) {
+            console.log(r);
+            let html = '';
+            callBack(r, {
+                success: function (data) {
+                    for (let i = 0; i < data.length; i++) {
+                        html += '<div class="swiper-slide" data-id="' + data[i].id + '">' +
+                            '<img src="' + data[i].original_img + '">' +
+                            '<span class="r-top">' + '</span>' +
+                            '<div class="lunbo-info">' +
+                            '<h4 class="fz-24 c-2c">' + data[i].goods_name + '</h4>' +
+                            '<p class="fz-18 c-a49">' + data[i].goods_remark + '</p>' +
+                            '</div>' +
+                            '</div>';
+                    }
+                    $('.lunbo-two .swiper-father .swiper-container .swiper-wrapper').append(html);
+                    var swiper = new Swiper('.swiper-container2', {
+                        // loop: true,
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                        spaceBetween: 58,
+                        navigation: {
+                            nextEl: '.swiper-button-next2',
+                            prevEl: '.swiper-button-prev2',
+                        },
+                    });
+                }
+            })
+        });
+
+
+
+
+
+
+
+
+        // 门店展示
+        ajax_post('/index.php/App/User/getShops', {}, function (r) {
+
+            var showhtml = "<style>.img-list > ul > li{display:none};</style>" +
+                "<script>" +
+                "$(function(){" +
+                "$('.img-list > ul > li:first-child').css('display','block');" +
+                "});" +
+                "function next(obj){" +
+                "var inx = parseInt($(obj).parent().parent().prev().find('ul').attr('index'));" +
+                "let len = $(obj).parent().parent().prev().find('ul').children().length;" +
+                "if (inx < len - 1) {" +
+                "inx++;" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).show();" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).siblings().hide();" +
+                "let inx2 = inx + 1;" +
+                "let count = (inx2) + '/' + len;" +
+                "$(obj).parent().find('.number').html(count)" +
+                "}" +
+                "$(obj).parent().parent().prev().find('ul').attr('index',inx);" +
+                "}" +
+                "function pre(obj){" +
+                "var inx = parseInt($(obj).parent().parent().prev().find('ul').attr('index'));" +
+
+                "let len = $(obj).parent().parent().prev().find('ul').children().length;" +
+                "if (inx > 0) {" +
+                "inx--;" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).show();" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).siblings().hide();" +
+                "let index3 = inx + 1;" +
+                "let count = index3 + '/' + len;" +
+                "$(obj).parent().find('.number').html(count)" +
+                "}" +
+                "$(obj).parent().parent().prev().find('ul').attr('index',inx);" +
+                "$(obj).parent().parent().prev().find('ul').children().eq(inx).removeClass('hide');" +
+
+                "}" +
+                "<\/script>";
+
+
+            r.forEach(function (item, index) {
+                var imghtml = '';
+
+                item.shops_images.forEach(function (elem, index) {
+                    imghtml += '<li>' +
+                        '<img src="' + 'http://freshfood.heifeng.xin' + elem.image_url + '">' +
+                        '</li>';
+                })
+                showhtml += '<div class="swiper-slide flex col fl-align">' +
+                    '<div class="img-list">' +
+                    '<ul index="0">' + imghtml + '</ul>' +
+                    '</div>' +
+                    '<div class="name-count flex fl-align fl-jsb">' +
+                    '<span class="name fz-26 c-2c">' + item.name + '</span>' +
+                    '<div class="count flex fl-align">' +
+                    '<span class="l-icon" onclick="pre(this)">' + '</span>' +
+                    '<span class="number">' + '1/' + item.shops_images.length + '</span>' +
+                    '<span class="r-icon" onclick="next(this)">' + '</span>' +
+                    '</div>' +
+                    '</div>' +
+                    '<p class="fz-16 c-c2">' + item.address + '</p>' +
+                    '<div class="fire-people-money flex fl-align">' +
+                    '<span class="fire">' + '</span>' +
+                    '<span class="people fz-16 c-2c">' + '客流量 日均约' + item.day_people + '人' + '</span>' +
+                    '<span class="fz-16 c-2c">' + '营业额 日均约' + item.day_sales + '元' + '</span>' +
+                    '</div>' +
+                    '</div>';
+
+
+            })
+
+            $('.lunbo-three .swiper-container .swiper-wrapper').append(showhtml);
+            var swiper = new Swiper('.swiper-container4', {
+                // autoplay: {
+                //     disableOnInteraction: false, //手动滑动之后不打断播放
+                //     delay: 3000
+                // },
+                setWrapperSize: true,
+                loop: true,
+                slidesPerView: 3,
+                spaceBetween: 36,
+                centeredSlides: true,
+            });
+
+
+
+
+
+
+            // 移入停止，移出播放
+            $(".swiper-wrapper").on("mouseenter", function () {
+                swiper.autoplay.stop();
+            });
+            $(".swiper-wrapper").on("mouseleave", function () {
+                // swiper.autoplay.start();
+            })
+
+            // 二级轮播
+            // 左右按钮：
+
+            /* 
+            let index = 0;
+            $('.l-icon').on('click', function () {
+                 // 给所有的子元素添加隐藏效果：
+                 $(this).parent().parent().prev().find('ul').children().addClass('hide');
+                 // 获取长度
+                 let len = $(this).parent().parent().prev().find('ul').children().length
+                 // console.log('当前长度：', len);
+                 // 判断获取下标值
+                 if (index > 0) {
+                     index--;
+                     let index3 = index + 1;
+                     // 更新分页器的内容
+                     let count = index3 + '/' + len;
+                     $(this).parent().find('.number').html(count)
+                 }
+                 // 根据对应的下标选择，对应的子元素，取消其上的隐藏效果
+                 $(this).parent().parent().prev().find('ul').children().eq(index).removeClass('hide');
+             })
+             */
+            /*$('.r-icon').on('click', function () {
+                // 给所有的子元素添加隐藏效果：
+                $(this).parent().parent().prev().find('ul').children().addClass('hide');
+                // 获取长度
+                let len = $(this).parent().parent().prev().find('ul').children().length
+
+                // 判断获取下标值
+                if (index < len - 1) {
+                    index++;
+                    let index2 = index + 1;
+                    // 更新分页器的内容
+                    let count = (index2) + '/' + len;
+                    $(this).parent().find('.number').html(count)
+                }
+                // 根据对应的下标选择，对应的子元素，取消其上的隐藏效果
+                $(this).parent().parent().prev().find('ul').children().eq(index).removeClass('hide');
+            })*/
+
+        })
+
+
+
+
+        // 政策
+        ajax_post('/index.php/App/User/getAlliancePolicy', {}, function (r) {
+            // 截取为俩个数组
+            let six = r.slice(0, 6);
+            let three = r.slice(6);
+            for (let i = 0; i < six.length; i++) {
+                let name = six[i].describe;
+                $('.floor-four .six .right ul').children().eq(i).find('p').html(name);
+            };
+            for (let i = 0; i < three.length; i++) {
+                let name = three[i].describe;
+                $('.floor-four .three .right ul').children().eq(i).find('.cont').html(name);
+            }
+        });
+
+        // 提交
+        $('.tijiao').on('click', function () {
+            // console.log(111);
+            let name = $('#getName').val()
+            let phone = $('#getPhone').val();
+            let info = $('#getInfo').val()
+            if (!name) {
+                alert('请输入你的称呼！')
+            } else if (!phone) {
+                alert('请输入您的联系电话！')
+            } else if (!(/^1[34578]\d{9}$/.test(phone))) {
+                alert('请输入有效的电话号码')
+            } else if (!info) {
+                alert('请输入你想咨询的内容')
+            } else {
+                let param = {
+                    name: name,
+                    phone: phone,
+                    content: info
+                }
+                ajax_post('/index.php/App/User/addFeedBack', param, function (r) {
+                    // console.log(r);
+                    let status = r.status
+                    if (status == 200) {
+                        alert('提交成功！');
+                        window.location.reload();
+                    } else {
+                        alert('提交失败，请稍后重试！')
+                    }
+                })
+            }
+        });
+
+        // 二维码
+        ajax_post('/index.php/App/user/getPicture', { pic_id: 2 }, function (r) {
+            // console.log(r);
+            let img = r.value
+            $('.code-line .right img').attr('src', img);
+        })
+
+
+
+
+    })
+</script>
+
+</html>
